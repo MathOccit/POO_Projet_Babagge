@@ -4,27 +4,25 @@ namespace NS_Comp_Mappage
 {
 	using namespace System;
 
-	ref class MappCommande
+	public ref class MappCommande : public MappStandard
 	{
 	public:
-		MappCommande();
-		~MappCommande();
 		String^ getDateLivraison(void);
 		String^ getDateEmission(void);
-		String^ getQuantiteProduit(void);
+		int^ getQuantiteProduit(void);
 		void setDateLivraison(String^);
 		void setDateEmission(String^);
-		void setQuantiteArticles(String^);
+		void setQuantiteArticles(int^);
 		String^ Select(void);
 		String^ Inserer(void);
 		String^ Suppr(void);
 		String^ Modifier(void);
 
 	private:
-		int ID;
+		int^ ID;
 		String^ DateLivraison;
 		String^ DateEmission;
-		int quantiteArticles;
+		int^ quantiteArticles;
 
 	};
 }

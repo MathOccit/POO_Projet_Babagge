@@ -1,4 +1,5 @@
 #pragma once
+#include "pch.h"
 #include "CompAD.h"
 #include "MappCommande.h"
 
@@ -9,13 +10,13 @@ namespace NS_Comp_Svc
 	public ref class ServiceCommandes
 	{
 	private:
-		NS_Comp_Data::CLcad oCad_Command;
-		NS_Comp_Mappage::MappCommande oMappCommand;
+		NS_Comp_Data::CLcad^ oCad_Command;
+		NS_Comp_Mappage::MappCommande^ oMappCommand;
 
 	public:
 		ServiceCommandes(void);
 		Data::DataSet^ SelectionnerToutesLesCommand(String^);
-		void AjouterUneCommand(String^, String^, int);
+		void AjouterUneCommand(String^, String^, int^);
 		void ModifierUneCommand(String^, String^, int);
 		void AfficherUneCommand(int);
 		void SupprimerUneCommand(int);
