@@ -140,6 +140,15 @@
     <ClInclude Include="FormClient.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="MyForm3.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="MyForm4.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="MyForm5.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="ServiceStock.h" />
     <ClInclude Include="ServiceStats.h" />
     <ClInclude Include="ServicePersonnel.h" />
@@ -164,6 +173,9 @@
     <ClCompile Include="MyForm.cpp" />
     <ClCompile Include="MyForm1.cpp" />
     <ClCompile Include="MyForm2.cpp" />
+    <ClCompile Include="MyForm3.cpp" />
+    <ClCompile Include="MyForm4.cpp" />
+    <ClCompile Include="MyForm5.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>

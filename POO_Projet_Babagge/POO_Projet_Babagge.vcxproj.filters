@@ -71,6 +71,15 @@
     <ClInclude Include="FormClient.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="MyForm3.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MyForm4.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MyForm5.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CppCLR_WinFormsProject.cpp">
@@ -107,6 +116,15 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="MappInfoPerso.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MyForm3.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MyForm4.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MyForm5.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
