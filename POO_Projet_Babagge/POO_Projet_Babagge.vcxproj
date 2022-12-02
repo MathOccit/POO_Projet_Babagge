@@ -130,10 +130,16 @@
     <ResourceCompile Include="app.rc" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Form1.h">
+    <ClInclude Include="FormCommande.h">
       <FileType>CppForm</FileType>
     </ClInclude>
-    <ClInclude Include="CompAD.h" />
+    <ClInclude Include="GCompAD.h" />
+    <ClInclude Include="FormMenuBase.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="FormClient.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="ServiceStock.h" />
     <ClInclude Include="ServiceStats.h" />
     <ClInclude Include="ServicePersonnel.h" />
@@ -154,12 +160,17 @@
     <ClCompile Include="CppCLR_WinFormsProject.cpp" />
     <ClCompile Include="Form1.cpp" />
     <ClCompile Include="MappCommande.cpp" />
+    <ClCompile Include="MappInfoPerso.cpp" />
+    <ClCompile Include="MyForm.cpp" />
+    <ClCompile Include="MyForm1.cpp" />
+    <ClCompile Include="MyForm2.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="ServiceClient.cpp" />
     <ClCompile Include="ServiceCommandes.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -173,8 +184,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.h</DependentUpon>
+    <EmbeddedResource Include="FormClient.resx">
+      <DependentUpon>FormClient.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCommande.resx">
+      <DependentUpon>FormCommande.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMenuBase.resx">
+      <DependentUpon>FormMenuBase.h</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

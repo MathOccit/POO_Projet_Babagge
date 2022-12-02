@@ -1,17 +1,37 @@
 #pragma once
 
 using namespace System;
-namespace NS_Comp_Mappage
+/*namespace NS_Comp_Mappage
 {
-	public ref class MappStandard
+	ref class MappStandard
 	{
 	public:
-		virtual String^ Selectionne(void);
-		virtual String^ Inserer(void);
-		virtual String^ Suppr(void);
-		virtual String^ Modifier(void);
+		~MappStandard(void);
+		virtual String^ Selectionne(void) = 0;
+		virtual String^ Inserer(void)=0;
+		virtual String^ Suppr(void)=0;
+		virtual String^ Modifier(void)=0;
 
 	private:
 		String^ sSql;
 	};
 }
+__interface IMappStandard
+{
+public:
+	virtual String^ Selectionne(void) = 0;
+	virtual String^ Inserer(void) = 0;
+	virtual String^ Suppr(void) = 0;
+	virtual String^ Modifier(void) = 0;
+	~IMappStandard ();
+};*/
+
+interface class MappStandard1
+{
+public:
+	virtual String^ Selectionne(void) = 0;
+	virtual String^ Inserer(void) = 0;
+	virtual String^ Suppr(void) = 0;
+	virtual String^ Modifier(void) = 0;
+	static String^ sSql;
+};

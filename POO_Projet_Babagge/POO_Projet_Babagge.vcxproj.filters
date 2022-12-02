@@ -26,7 +26,7 @@
     <ClInclude Include="pch.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Form1.h">
+    <ClInclude Include="FormCommande.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="MappCommande.h">
@@ -50,7 +50,7 @@
     <ClInclude Include="ServiceClient.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="CompAD.h">
+    <ClInclude Include="GCompAD.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="ServiceCommandes.h">
@@ -63,6 +63,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="ServiceStock.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FormMenuBase.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FormClient.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -86,6 +92,21 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="ServiceCommandes.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MyForm.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MyForm1.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MyForm2.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ServiceClient.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MappInfoPerso.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

@@ -12,7 +12,7 @@ Data::DataSet^ NS_Comp_Svc::ServiceCommandes::SelectionnerToutesLesCommand(Strin
 {
 	System::String^ sql;
 
-	sql = this->oMappCommand->Select();
+	sql = this->oMappCommand->Selectionne();
 	return this->oCad_Command->getRows(sql, dataTableName);
 }
 

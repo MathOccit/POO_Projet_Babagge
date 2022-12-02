@@ -31,9 +31,9 @@ void NS_Comp_Mappage::MappCommande::setQuantiteArticles(int^ quantiteArticles)
     this->quantiteArticles = quantiteArticles;
 }
 
-String^ NS_Comp_Mappage::MappCommande::Select(void)
+String^ NS_Comp_Mappage::MappCommande::Selectionne(void)
 {
-    return "SELECT [id], [Date livraison], [Date Emission], [Quatite Article] FROM [DB_P6].[dbo].[Commandes]";
+    return "SELECT [ID], [date_livraison_commande], [date_emission_commande], [quantite_article],[ref_commande],[prix_commande] FROM [Projet].[dbo].[commande]";
 }
 
 String^ NS_Comp_Mappage::MappCommande::Inserer(void)

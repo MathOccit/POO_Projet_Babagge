@@ -1,10 +1,11 @@
 #pragma once
+using namespace System;
 
 namespace NS_Comp_Mappage
 {
-	using namespace System;
 
-	public ref class MappCommande : public MappStandard
+
+	ref class MappCommande
 	{
 	public:
 		String^ getDateLivraison(void);
@@ -13,7 +14,7 @@ namespace NS_Comp_Mappage
 		void setDateLivraison(String^);
 		void setDateEmission(String^);
 		void setQuantiteArticles(int^);
-		String^ Select(void);
+		String^ Selectionne(void);
 		String^ Inserer(void);
 		String^ Suppr(void);
 		String^ Modifier(void);

@@ -1,7 +1,5 @@
 #pragma once
 #include "pch.h"
-#include "CompAD.h"
-#include "MappCommande.h"
 
 using namespace System;
 
