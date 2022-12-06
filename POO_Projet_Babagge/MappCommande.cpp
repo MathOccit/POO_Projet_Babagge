@@ -16,6 +16,11 @@ int^ NS_Comp_Mappage::MappCommande::getQuantiteProduit(void)
     return this->quantiteArticles;
 }
 
+void NS_Comp_Mappage::MappCommande::setID(String^ ID)
+{
+    this->ID = ID;
+}
+
 void NS_Comp_Mappage::MappCommande::setDateLivraison(String^ DateLivraison)
 {
     this->DateLivraison = DateLivraison;
@@ -26,6 +31,11 @@ void NS_Comp_Mappage::MappCommande::setDateEmission(String^ DateEmission)
     this->DateEmission= DateEmission;
 }
 
+void NS_Comp_Mappage::MappCommande::setRef(String^ Ref)
+{
+    this->Ref = Ref;
+}
+
 void NS_Comp_Mappage::MappCommande::setQuantiteArticles(int^ quantiteArticles)
 {
     this->quantiteArticles = quantiteArticles;
@@ -33,7 +43,7 @@ void NS_Comp_Mappage::MappCommande::setQuantiteArticles(int^ quantiteArticles)
 
 String^ NS_Comp_Mappage::MappCommande::Selectionne(void)
 {
-    return "SELECT [ID], [date_livraison_commande], [date_emission_commande], [quantite_article],[ref_commande],[prix_commande] FROM [Projet].[dbo].[commande]";
+    return "SELECT * FROM [DonneBDD_Test10].[dbo].[commande]";
 }
 
 String^ NS_Comp_Mappage::MappCommande::Inserer(void)
@@ -43,10 +53,15 @@ String^ NS_Comp_Mappage::MappCommande::Inserer(void)
 
 String^ NS_Comp_Mappage::MappCommande::Suppr(void)
 {
-    return "DELETE FROM Commandes WHERE [id]";
+    return "DELETE FROM [DonneBDD_Test10].[dbo].[stocker] WHERE [stocker].[id_commande] = '" + this->ID + "'; DELETE FROM [DonneBDD_Test10].[dbo].[commander] WHERE [commander].[id_commande] = '" + this->ID + "';DELETE FROM [DonneBDD_Test10].[dbo].[reduire] WHERE [reduire].[id_commande] = '" + this->ID + "';DELETE FROM [DonneBDD_Test10].[dbo].[payer] WHERE [payer].[id_commande] = '" + this->ID + "';DELETE FROM [DonneBDD_Test10].[dbo].[commande] WHERE [commande].[id_commande] = '" + this->ID + "';";
 }
 
 String^ NS_Comp_Mappage::MappCommande::Modifier(void)
 {
     return "UPDATE Commandes SET DateLivraison = " + this->DateLivraison + "', DateEmission = '" + this->DateEmission + "', quantiteArticles'" + this->quantiteArticles + "WHERE" + this->ID +';';
+}
+
+System::String^ NS_Comp_Mappage::MappCommande::Rechercher(void)
+{
+    return "SELECT * FROM [DonneBDD_Test10].[dbo].[commande] WHERE [commande].[ref_commande] LIKE '%" + this->Ref + "%';";
 }

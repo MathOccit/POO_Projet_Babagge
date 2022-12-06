@@ -140,13 +140,37 @@
     <ClInclude Include="FormClient.h">
       <FileType>CppForm</FileType>
     </ClInclude>
-    <ClInclude Include="MyForm3.h">
+    <ClInclude Include="FormSupprCo.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="FormSupprPrs.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="FormSupprCl.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="FormModifCl.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="FormAjoutCl.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="MyForm4.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="MyForm5.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="FormStock.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="FormSupprStock.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="FormPersonnel.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="MyForm9.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="ServiceStock.h" />
@@ -170,12 +194,21 @@
     <ClCompile Include="Form1.cpp" />
     <ClCompile Include="MappCommande.cpp" />
     <ClCompile Include="MappInfoPerso.cpp" />
+    <ClCompile Include="MappPersonnel.cpp" />
     <ClCompile Include="MyForm.cpp" />
     <ClCompile Include="MyForm1.cpp" />
+    <ClCompile Include="MyForm10.cpp" />
+    <ClCompile Include="MyForm11.cpp" />
+    <ClCompile Include="MyForm12.cpp" />
+    <ClCompile Include="MyForm13.cpp" />
     <ClCompile Include="MyForm2.cpp" />
     <ClCompile Include="MyForm3.cpp" />
     <ClCompile Include="MyForm4.cpp" />
     <ClCompile Include="MyForm5.cpp" />
+    <ClCompile Include="MyForm6.cpp" />
+    <ClCompile Include="MyForm7.cpp" />
+    <ClCompile Include="MyForm8.cpp" />
+    <ClCompile Include="MyForm9.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
@@ -184,6 +217,9 @@
     </ClCompile>
     <ClCompile Include="ServiceClient.cpp" />
     <ClCompile Include="ServiceCommandes.cpp" />
+    <ClCompile Include="MappStock.cpp" />
+    <ClCompile Include="ServicePersonnel.cpp" />
+    <ClCompile Include="ServiceStock.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="app.ico" />
@@ -205,6 +241,36 @@
     <EmbeddedResource Include="FormMenuBase.resx">
       <DependentUpon>FormMenuBase.h</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormModifCl.resx">
+      <DependentUpon>FormModifCl.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPersonnel.resx">
+      <DependentUpon>FormPersonnel.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormStock.resx">
+      <DependentUpon>FormStock.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSupprCl.resx">
+      <DependentUpon>FormSupprCl.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSupprCo.resx">
+      <DependentUpon>FormSupprCo.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSupprPrs.resx">
+      <DependentUpon>FormSupprPrs.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSupprStock.resx">
+      <DependentUpon>FormSupprStock.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAjoutCl.resx">
+      <DependentUpon>FormAjoutCl.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyForm9.resx">
+      <DependentUpon>MyForm9.h</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram.cd" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

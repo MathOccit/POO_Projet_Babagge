@@ -11,19 +11,23 @@ namespace NS_Comp_Mappage
 		String^ getDateLivraison(void);
 		String^ getDateEmission(void);
 		int^ getQuantiteProduit(void);
+		void setID(String^);
 		void setDateLivraison(String^);
 		void setDateEmission(String^);
+		void setRef(String^);
 		void setQuantiteArticles(int^);
 		String^ Selectionne(void);
 		String^ Inserer(void);
 		String^ Suppr(void);
 		String^ Modifier(void);
+		System::String^ Rechercher(void);
 
 	private:
-		int^ ID;
+		String^ ID;
 		String^ DateLivraison;
 		String^ DateEmission;
 		int^ quantiteArticles;
+		String^ Ref;
 
 	};
 }

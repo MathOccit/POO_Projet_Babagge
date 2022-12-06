@@ -17,6 +17,7 @@ namespace NS_Comp_Svc
 		void AjouterUneCommand(String^, String^, int^);
 		void ModifierUneCommand(String^, String^, int);
 		void AfficherUneCommand(int);
-		void SupprimerUneCommand(int);
+		void SupprimerUneCommand(String^);
+		Data::DataSet^ Rechercher(String^, String^);
 	};
 }

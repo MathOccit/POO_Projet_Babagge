@@ -6,7 +6,6 @@ namespace NS_Comp_Mappage
     ref class MappInfoPerso
     {
     public:
-        int^ getID(void);
         String^ getNom(void);
         String^ getPrenom(void);
         String^ getNaissance(void);
@@ -16,6 +15,8 @@ namespace NS_Comp_Mappage
         String^ getNomRue(void);
         String^ getVille(void);
         String^ getPays(void);
+        void setIDint(int^);
+        void setIDstr(String^);
         void setNom(String^);
         void setPrenom(String^);
         void setNaissance(String^);
@@ -29,10 +30,20 @@ namespace NS_Comp_Mappage
         String^ Inserer(void);
         String^ Modifier(void);
         String^ Suppr(void);
-        String^ Afficher(void);
+        String^ Rechercher(void);
+        String^ Count(void);
+        String^ RechercherModif(void);
+        String^ Inserer_donnees_perso(void);
+        String^ Afficher_id_client(void);
+        String^ Inserer_donnees_adresse(void);
+        String^ Inserer_donnees_geographie(void);
+        String^ Afficher_id_adresse(void);
+        String^ Afficher_id_geographie(void);
+
 
     private:
-        int^ ID;
+        int^ IDint;
+        String^ IDstr;
         String^ nom;
         String^ prenom;
         String^ naissance;

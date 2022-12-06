@@ -1,6 +1,8 @@
 #pragma once
 #include "FormCommande.h"
 #include "FormClient.h"
+#include "FormStock.h"
+#include "FormPersonnel.h"
 
 namespace POO_Projet_Babagge {
 
@@ -117,7 +119,7 @@ namespace POO_Projet_Babagge {
 			this->button5->ForeColor = System::Drawing::Color::SeaShell;
 			this->button5->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button5.Image")));
 			this->button5->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
-			this->button5->Location = System::Drawing::Point(0, 340);
+			this->button5->Location = System::Drawing::Point(0, 390);
 			this->button5->Name = L"button5";
 			this->button5->Padding = System::Windows::Forms::Padding(12, 0, 0, 0);
 			this->button5->Size = System::Drawing::Size(202, 60);
@@ -140,7 +142,7 @@ namespace POO_Projet_Babagge {
 			this->button4->ForeColor = System::Drawing::Color::SeaShell;
 			this->button4->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button4.Image")));
 			this->button4->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
-			this->button4->Location = System::Drawing::Point(0, 280);
+			this->button4->Location = System::Drawing::Point(0, 330);
 			this->button4->Name = L"button4";
 			this->button4->Padding = System::Windows::Forms::Padding(12, 0, 0, 0);
 			this->button4->Size = System::Drawing::Size(202, 60);
@@ -163,7 +165,7 @@ namespace POO_Projet_Babagge {
 			this->button3->ForeColor = System::Drawing::Color::SeaShell;
 			this->button3->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button3.Image")));
 			this->button3->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
-			this->button3->Location = System::Drawing::Point(0, 220);
+			this->button3->Location = System::Drawing::Point(0, 270);
 			this->button3->Name = L"button3";
 			this->button3->Padding = System::Windows::Forms::Padding(12, 0, 0, 0);
 			this->button3->Size = System::Drawing::Size(202, 60);
@@ -186,7 +188,7 @@ namespace POO_Projet_Babagge {
 			this->button2->ForeColor = System::Drawing::Color::SeaShell;
 			this->button2->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button2.Image")));
 			this->button2->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
-			this->button2->Location = System::Drawing::Point(0, 160);
+			this->button2->Location = System::Drawing::Point(0, 210);
 			this->button2->Name = L"button2";
 			this->button2->Padding = System::Windows::Forms::Padding(12, 0, 0, 0);
 			this->button2->Size = System::Drawing::Size(202, 60);
@@ -209,7 +211,7 @@ namespace POO_Projet_Babagge {
 			this->button1->ForeColor = System::Drawing::Color::SeaShell;
 			this->button1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button1.Image")));
 			this->button1->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
-			this->button1->Location = System::Drawing::Point(0, 100);
+			this->button1->Location = System::Drawing::Point(0, 150);
 			this->button1->Name = L"button1";
 			this->button1->Padding = System::Windows::Forms::Padding(12, 0, 0, 0);
 			this->button1->Size = System::Drawing::Size(202, 60);
@@ -227,7 +229,7 @@ namespace POO_Projet_Babagge {
 			this->panel2->Dock = System::Windows::Forms::DockStyle::Top;
 			this->panel2->Location = System::Drawing::Point(0, 0);
 			this->panel2->Name = L"panel2";
-			this->panel2->Size = System::Drawing::Size(202, 100);
+			this->panel2->Size = System::Drawing::Size(202, 150);
 			this->panel2->TabIndex = 1;
 			// 
 			// panel3
@@ -240,17 +242,19 @@ namespace POO_Projet_Babagge {
 			this->panel3->Location = System::Drawing::Point(202, 0);
 			this->panel3->Margin = System::Windows::Forms::Padding(0, 3, 3, 3);
 			this->panel3->Name = L"panel3";
-			this->panel3->Size = System::Drawing::Size(731, 100);
+			this->panel3->Size = System::Drawing::Size(731, 150);
 			this->panel3->TabIndex = 1;
 			// 
 			// LblTitre
 			// 
+			this->LblTitre->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->LblTitre->AutoSize = true;
-			this->LblTitre->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15));
+			this->LblTitre->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 39.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
 			this->LblTitre->ForeColor = System::Drawing::SystemColors::ButtonFace;
-			this->LblTitre->Location = System::Drawing::Point(329, 37);
+			this->LblTitre->Location = System::Drawing::Point(268, 46);
 			this->LblTitre->Name = L"LblTitre";
-			this->LblTitre->Size = System::Drawing::Size(76, 25);
+			this->LblTitre->Size = System::Drawing::Size(203, 61);
 			this->LblTitre->TabIndex = 3;
 			this->LblTitre->Text = L"Acceuil";
 			this->LblTitre->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
@@ -258,9 +262,9 @@ namespace POO_Projet_Babagge {
 			// PanelChildForm
 			// 
 			this->PanelChildForm->Dock = System::Windows::Forms::DockStyle::Fill;
-			this->PanelChildForm->Location = System::Drawing::Point(202, 100);
+			this->PanelChildForm->Location = System::Drawing::Point(202, 150);
 			this->PanelChildForm->Name = L"PanelChildForm";
-			this->PanelChildForm->Size = System::Drawing::Size(731, 498);
+			this->PanelChildForm->Size = System::Drawing::Size(731, 448);
 			this->PanelChildForm->TabIndex = 2;
 			// 
 			// FormMenuBase
@@ -276,7 +280,8 @@ namespace POO_Projet_Babagge {
 			this->DoubleBuffered = true;
 			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
 			this->Name = L"FormMenuBase";
-			this->Text = L"MyForm1";
+			this->Text = L"Elec\'TRON Enterprise Edition";
+			this->WindowState = System::Windows::Forms::FormWindowState::Maximized;
 			this->panel1->ResumeLayout(false);
 			this->panel3->ResumeLayout(false);
 			this->panel3->PerformLayout();
@@ -306,7 +311,7 @@ private: System::Void btnClient(System::Object^ sender, System::EventArgs^ e)
 }
 private: System::Void btnPerso(System::Object^ sender, System::EventArgs^ e) 
 {
-
+	OpenChildForm(gcnew POO_Projet_Babagge::FormPersonnel, sender);
 }
 private: System::Void btnCommandes(System::Object^ sender, System::EventArgs^ e) 
 {
@@ -314,11 +319,12 @@ private: System::Void btnCommandes(System::Object^ sender, System::EventArgs^ e)
 }
 private: System::Void btnStock(System::Object^ sender, System::EventArgs^ e) 
 {
-
+	OpenChildForm(gcnew POO_Projet_Babagge::FormStock, sender);
 }
 private: System::Void btnStats(System::Object^ sender, System::EventArgs^ e) 
 {
 
 }
+
 };
 }

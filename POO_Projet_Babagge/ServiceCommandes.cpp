@@ -45,7 +45,19 @@ void NS_Comp_Svc::ServiceCommandes::AfficherUneCommand(int)
 	throw gcnew System::NotImplementedException();
 }
 
-void NS_Comp_Svc::ServiceCommandes::SupprimerUneCommand(int)
+void NS_Comp_Svc::ServiceCommandes::SupprimerUneCommand(String^ ID)
 {
-	throw gcnew System::NotImplementedException();
+	System::String^ sql;
+	this->oMappCommand->setID(ID);
+	sql = this->oMappCommand->Suppr();
+
+	this->oCad_Command->actionRows(sql);
 }
+
+Data::DataSet^ NS_Comp_Svc::ServiceCommandes::Rechercher(String^ Recherche, String^ dataTableName)
+{
+	System::String^ sql;
+	this->oMappCommand->setRef(Recherche);
+	sql = this->oMappCommand->Rechercher();
+	return this->oCad_Command->getRows(sql, dataTableName);
+};
