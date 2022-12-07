@@ -253,9 +253,6 @@ private: System::Void Client_Load(System::Object^ sender, System::EventArgs^ e)
 	this->oDs = this->oSvcCl->SelectionnerTousLesClients("Rsl");
 	this->dataGridView1->DataSource = this->oDs;
 	this->dataGridView1->DataMember = "Rsl";
-	//this->oSvcCl->Count();
-	//maskedTextBox1->Text = Nombre;
-	//String^ Nombre = row->Cells["Nombre"]->Value->ToString();
 }
 private: System::Void RchrchNmCl(System::Object^ sender, System::EventArgs^ e) 
 {
