@@ -20,7 +20,7 @@ Data::DataSet^ NS_Comp_Svc::ServiceStock::SelectionnerTousLeStock(String^ dataTa
 };
 
 
-void NS_Comp_Svc::ServiceStock::AjouterUnStock(String^ nomArticle, String^ categorieArticle, int^ quantite, double^ prixArticleHT, String^ prixArticleTVA, int^ refArticle, int^ seuilReappro, String^ designationArticle)
+void NS_Comp_Svc::ServiceStock::AjouterUnStock(String^ nomArticle, String^ categorieArticle, String^ quantite, String^ prixArticleHT, String^ prixArticleTVA, String^ refArticle, String^ seuilReappro, String^ designationArticle)
 {
 	System::String^ sql;
 	this->oMappStock->setNomArticle(nomArticle);
@@ -36,8 +36,9 @@ void NS_Comp_Svc::ServiceStock::AjouterUnStock(String^ nomArticle, String^ categ
 	this->oCad_Stock->actionRows(sql);
 }
 
-void NS_Comp_Svc::ServiceStock::ModifierUnStock(String^ nomArticle, String^ categorieArticle, int^ quantite, double^ prixArticleHT, String^ prixArticleTVA, int^ refArticle, int^ seuilReappro, String^ designationArticle) {
+void NS_Comp_Svc::ServiceStock::ModifierUnStock(String^ IDstock, String^ nomArticle, String^ categorieArticle, String^ quantite, String^ refArticle, String^ designationArticle, String^ Marge, String^ prixArticleHT, String^ prixArticleTVA, String^ seuilReappro) {
 	System::String^ sql;
+	this->oMappStock->setID(IDstock);
 	this->oMappStock->setNomArticle(nomArticle);
 	this->oMappStock->setCategorieArticle(categorieArticle);
 	this->oMappStock->setQuantite(quantite);
@@ -46,6 +47,7 @@ void NS_Comp_Svc::ServiceStock::ModifierUnStock(String^ nomArticle, String^ cate
 	this->oMappStock->setrefArticle(refArticle);
 	this->oMappStock->setseuilReappro(seuilReappro);
 	this->oMappStock->setdesignationArticle(designationArticle);
+	this->oMappStock->setMarge(Marge);
 	sql = this->oMappStock->Modifier();
 
 	this->oCad_Stock->actionRows(sql);

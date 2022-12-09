@@ -19,8 +19,8 @@ namespace NS_Comp_Svc
 		ServiceStock(void);
 
 		Data::DataSet^ SelectionnerTousLeStock(String^);
-		void AjouterUnStock(String^, String^, int^, double^, String^, int^, int^, String^);
-		void ModifierUnStock(String^, String^, int^, double^, String^, int^, int^, String^);
+		void AjouterUnStock(String^, String^, String^, String^, String^, String^, String^, String^);
+		void ModifierUnStock(String^ , String^, String^, String^, String^, String^, String^, String^, String^ , String^ );
 		void AfficherUnStock(int);
 		void SupprimerUnStock(String^);
 		Data::DataSet^ Rechercher(String^, String^);

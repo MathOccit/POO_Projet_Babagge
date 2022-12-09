@@ -10,11 +10,12 @@ namespace NS_Comp_Mappage
 		String^ ID;
 		String^ nomArticle;
 		String^ categorieArticle;
-		int^ quantite;
-		double^ prixArticleHT;
+		String^ quantite;
+		String^ prixArticleHT;
 		String^ prixArticleTVA;
-		int^ refArticle;
-		int^ seuilReappro;
+		String^ Marge;
+		String^ refArticle;
+		String^ seuilReappro;
 		String^ designationArticle;
 		String^ Recherche;
 
@@ -22,22 +23,23 @@ namespace NS_Comp_Mappage
 		String^ getID(void);
 		System::String^ getNomArticle(void);
 		System::String^ getCategorieArticle(void);
-		int^ getQuantite(void);
-		double^ getPrixArticleHT(void);
-		System::String^ getPrixArticleTVA(void);
-		int^ getrefArticle(void);
-		int^ getseuilReappro(void);
+		String^ getQuantite(void);
+		String^ getPrixArticleHT(void);
+		String^ getPrixArticleTVA(void);
+		String^ getrefArticle(void);
+		String^ getseuilReappro(void);
 		System::String^ getdesignationArticle(void);
 
 
 		void setID(String^);
 		void setNomArticle(System::String^);
 		void setCategorieArticle(System::String^);
-		void setQuantite(int^);
-		void setPrixArticleHT(double^);
-		void setPrixArticleTVA(System::String^);
-		void setrefArticle(int^);
-		void setseuilReappro(int^);
+		void setQuantite(String^);
+		void setPrixArticleHT(String^);
+		void setMarge(String^);
+		void setPrixArticleTVA(String^);
+		void setrefArticle(String^);
+		void setseuilReappro(String^);
 		void setdesignationArticle(System::String^);
 
 		System::String^ Selectionner(void);

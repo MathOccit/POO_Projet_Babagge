@@ -17,6 +17,9 @@ namespace NS_Comp_Mappage
         String^ getPays(void);
         void setIDint(int^);
         void setIDstr(String^);
+        void setIDCl(String^);
+        void setIDAdd(String^);
+        void setIDGeo(String^);
         void setNom(String^);
         void setPrenom(String^);
         void setNaissance(String^);
@@ -44,6 +47,9 @@ namespace NS_Comp_Mappage
     private:
         int^ IDint;
         String^ IDstr;
+        String^ IDCl;
+        String^ IDAdd;
+        String^ IDGeo;
         String^ nom;
         String^ prenom;
         String^ naissance;

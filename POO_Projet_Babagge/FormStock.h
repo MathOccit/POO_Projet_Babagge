@@ -1,6 +1,7 @@
 #pragma once
 #include "ServiceStock.h"
 #include "FormSupprStock.h"
+#include "FormModifStock.h"
 
 namespace POO_Projet_Babagge {
 
@@ -45,6 +46,7 @@ namespace POO_Projet_Babagge {
 	private: NS_Comp_Svc::ServiceStock^ oSvcSt = gcnew NS_Comp_Svc::ServiceStock;
 	private: System::Windows::Forms::Button^ button4;
 	private: POO_Projet_Babagge::FormSupprStock^ FormSuppStock;
+	private: POO_Projet_Babagge::FormModifStock^ FormModifStock;
 
 	protected:
 
@@ -103,17 +105,18 @@ namespace POO_Projet_Babagge {
 			// 
 			// button2
 			// 
-			this->button2->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Left));
+			this->button2->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Right));
 			this->button2->Location = System::Drawing::Point(628, 392);
 			this->button2->Name = L"button2";
 			this->button2->Size = System::Drawing::Size(75, 23);
 			this->button2->TabIndex = 6;
 			this->button2->Text = L"Modifier";
 			this->button2->UseVisualStyleBackColor = true;
+			this->button2->Click += gcnew System::EventHandler(this, &FormStock::button2_Click);
 			// 
 			// button3
 			// 
-			this->button3->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Left));
+			this->button3->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Right));
 			this->button3->Location = System::Drawing::Point(547, 392);
 			this->button3->Name = L"button3";
 			this->button3->Size = System::Drawing::Size(75, 23);
@@ -124,7 +127,7 @@ namespace POO_Projet_Babagge {
 			// 
 			// button4
 			// 
-			this->button4->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Left));
+			this->button4->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Right));
 			this->button4->Location = System::Drawing::Point(466, 392);
 			this->button4->Name = L"button4";
 			this->button4->Size = System::Drawing::Size(75, 23);
@@ -169,6 +172,11 @@ private: System::Void Cherche(System::Object^ sender, System::EventArgs^ e)
 	this->oDs = this->oSvcSt->Rechercher(textBox1->Text, "Stock");
 	this->dataGridView1->DataSource = this->oDs;
 	this->dataGridView1->DataMember = "Stock";
+}
+private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) 
+{
+	FormModifStock = gcnew POO_Projet_Babagge::FormModifStock;
+	FormModifStock->Show();
 }
 };
 }

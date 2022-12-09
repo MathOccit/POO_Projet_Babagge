@@ -37,10 +37,10 @@ namespace POO_Projet_Babagge {
 				delete components;
 			}
 		}
-	private: System::Windows::Forms::Panel^ panel1;
+
 	protected:
-	private: System::Windows::Forms::MaskedTextBox^ maskedTextBox1;
-	private: System::Windows::Forms::Label^ label1;
+
+
 
 	private: System::Windows::Forms::DataGridView^ dataGridView1;
 
@@ -83,9 +83,6 @@ namespace POO_Projet_Babagge {
 		/// </summary>
 		void InitializeComponent(void)
 		{
-			this->panel1 = (gcnew System::Windows::Forms::Panel());
-			this->maskedTextBox1 = (gcnew System::Windows::Forms::MaskedTextBox());
-			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->dataGridView1 = (gcnew System::Windows::Forms::DataGridView());
 			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
 			this->label2 = (gcnew System::Windows::Forms::Label());
@@ -94,40 +91,8 @@ namespace POO_Projet_Babagge {
 			this->button3 = (gcnew System::Windows::Forms::Button());
 			this->textBox2 = (gcnew System::Windows::Forms::TextBox());
 			this->label3 = (gcnew System::Windows::Forms::Label());
-			this->panel1->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
 			this->SuspendLayout();
-			// 
-			// panel1
-			// 
-			this->panel1->Controls->Add(this->maskedTextBox1);
-			this->panel1->Controls->Add(this->label1);
-			this->panel1->Dock = System::Windows::Forms::DockStyle::Top;
-			this->panel1->Location = System::Drawing::Point(0, 0);
-			this->panel1->Name = L"panel1";
-			this->panel1->Size = System::Drawing::Size(715, 39);
-			this->panel1->TabIndex = 0;
-			// 
-			// maskedTextBox1
-			// 
-			this->maskedTextBox1->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Left));
-			this->maskedTextBox1->Location = System::Drawing::Point(136, 19);
-			this->maskedTextBox1->Name = L"maskedTextBox1";
-			this->maskedTextBox1->ReadOnly = true;
-			this->maskedTextBox1->Size = System::Drawing::Size(48, 20);
-			this->maskedTextBox1->TabIndex = 1;
-			// 
-			// label1
-			// 
-			this->label1->AutoSize = true;
-			this->label1->Dock = System::Windows::Forms::DockStyle::Bottom;
-			this->label1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->label1->Location = System::Drawing::Point(0, 22);
-			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(130, 17);
-			this->label1->TabIndex = 0;
-			this->label1->Text = L"Nombre de clients :";
 			// 
 			// dataGridView1
 			// 
@@ -135,9 +100,9 @@ namespace POO_Projet_Babagge {
 				| System::Windows::Forms::AnchorStyles::Left)
 				| System::Windows::Forms::AnchorStyles::Right));
 			this->dataGridView1->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
-			this->dataGridView1->Location = System::Drawing::Point(12, 45);
+			this->dataGridView1->Location = System::Drawing::Point(12, 12);
 			this->dataGridView1->Name = L"dataGridView1";
-			this->dataGridView1->Size = System::Drawing::Size(691, 306);
+			this->dataGridView1->Size = System::Drawing::Size(691, 339);
 			this->dataGridView1->TabIndex = 3;
 			// 
 			// textBox1
@@ -232,12 +197,9 @@ namespace POO_Projet_Babagge {
 			this->Controls->Add(this->button1);
 			this->Controls->Add(this->label2);
 			this->Controls->Add(this->dataGridView1);
-			this->Controls->Add(this->panel1);
 			this->Name = L"Client";
 			this->Text = L"Clients";
 			this->Load += gcnew System::EventHandler(this, &Client::Client_Load);
-			this->panel1->ResumeLayout(false);
-			this->panel1->PerformLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->EndInit();
 			this->ResumeLayout(false);
 			this->PerformLayout();

@@ -8,7 +8,11 @@ namespace NS_Comp_Mappage
 	public ref class MappPersonnel
 	{
 	private:
-		String^ ID;
+		int^ IDint;
+		String^ IDstr;
+		String^ IDPrs;
+		String^ IDAdd;
+		String^ IDGeo;
 		String^ nom;
 		String^ prenom;
 		String^ naissance;
@@ -22,9 +26,8 @@ namespace NS_Comp_Mappage
 		String^ titulaire;
 
 	public:
-		MappPersonnel(void);
-
-		String^ getID(void);
+		int^ getIDint(void);
+		String^ getIDstr(void);
 		String^ getNom(void);
 		String^ getPrenom(void);
 		String^ getNaissance(void);
@@ -37,7 +40,11 @@ namespace NS_Comp_Mappage
 		String^ getDateEmbauche(void);
 		String^ getTitulaire(void);
 
-		void setID(String^);
+		void setIDstr(String^);
+		void setIDint(int^);
+		void setIDPrs(String^);
+		void setIDAdd(String^);
+		void setIDGeo(String^);
 		void setNom(String^);
 		void setPrenom(String^);
 		void setNaissance(String^);
@@ -54,7 +61,15 @@ namespace NS_Comp_Mappage
 		String^ Ajouter(void);
 		String^ Supprimer(void);
 		String^ Modifier(void);
-		System::String^ Rechercher(void);
+		String^ Rechercher(void);
+		String^ RechercherModif(void);
+		String^ Selectionner_id_personnel(void);
+		String^ Selectionner_id_adresse(void);
+		String^ Selectionner_id_geographie(void);
+
+		String^ Inserer_donnees_personnel(void);
+		String^ Inserer_donnees_adresse(void);
+		String^ Inserer_donnes_geographie(void);
 
 	};
 }

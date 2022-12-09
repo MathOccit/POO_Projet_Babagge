@@ -35,9 +35,9 @@ namespace POO_Projet_Babagge {
 				delete components;
 			}
 		}
-	private: System::Windows::Forms::Panel^ panel1;
+
 	protected:
-	private: System::Windows::Forms::Panel^ panel3;
+
 	private: System::Windows::Forms::Label^ label1;
 	private: System::Windows::Forms::Panel^ panel4;
 	private: System::Windows::Forms::Button^ button1;
@@ -67,8 +67,6 @@ namespace POO_Projet_Babagge {
 		/// </summary>
 		void InitializeComponent(void)
 		{
-			this->panel1 = (gcnew System::Windows::Forms::Panel());
-			this->panel3 = (gcnew System::Windows::Forms::Panel());
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->panel4 = (gcnew System::Windows::Forms::Panel());
 			this->button1 = (gcnew System::Windows::Forms::Button());
@@ -80,32 +78,10 @@ namespace POO_Projet_Babagge {
 			this->textBox2 = (gcnew System::Windows::Forms::TextBox());
 			this->label3 = (gcnew System::Windows::Forms::Label());
 			this->button3 = (gcnew System::Windows::Forms::Button());
-			this->panel1->SuspendLayout();
 			this->panel4->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridViewSupprCo))->BeginInit();
 			this->panel6->SuspendLayout();
 			this->SuspendLayout();
-			// 
-			// panel1
-			// 
-			this->panel1->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(96)), static_cast<System::Int32>(static_cast<System::Byte>(29)),
-				static_cast<System::Int32>(static_cast<System::Byte>(96)));
-			this->panel1->Controls->Add(this->panel3);
-			this->panel1->Dock = System::Windows::Forms::DockStyle::Left;
-			this->panel1->Location = System::Drawing::Point(0, 0);
-			this->panel1->Name = L"panel1";
-			this->panel1->Size = System::Drawing::Size(100, 466);
-			this->panel1->TabIndex = 1;
-			// 
-			// panel3
-			// 
-			this->panel3->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(19)),
-				static_cast<System::Int32>(static_cast<System::Byte>(64)));
-			this->panel3->Dock = System::Windows::Forms::DockStyle::Top;
-			this->panel3->Location = System::Drawing::Point(0, 0);
-			this->panel3->Name = L"panel3";
-			this->panel3->Size = System::Drawing::Size(100, 70);
-			this->panel3->TabIndex = 2;
 			// 
 			// label1
 			// 
@@ -114,9 +90,9 @@ namespace POO_Projet_Babagge {
 			this->label1->Dock = System::Windows::Forms::DockStyle::Top;
 			this->label1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label1->Location = System::Drawing::Point(100, 0);
+			this->label1->Location = System::Drawing::Point(0, 0);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(522, 70);
+			this->label1->Size = System::Drawing::Size(622, 70);
 			this->label1->TabIndex = 2;
 			this->label1->Text = L"Supprimer une Commande";
 			this->label1->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
@@ -127,9 +103,9 @@ namespace POO_Projet_Babagge {
 			this->panel4->Controls->Add(this->textBox_supp);
 			this->panel4->Controls->Add(this->label2);
 			this->panel4->Dock = System::Windows::Forms::DockStyle::Top;
-			this->panel4->Location = System::Drawing::Point(100, 70);
+			this->panel4->Location = System::Drawing::Point(0, 70);
 			this->panel4->Name = L"panel4";
-			this->panel4->Size = System::Drawing::Size(522, 52);
+			this->panel4->Size = System::Drawing::Size(622, 52);
 			this->panel4->TabIndex = 6;
 			// 
 			// button1
@@ -165,9 +141,9 @@ namespace POO_Projet_Babagge {
 			// 
 			this->dataGridViewSupprCo->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
 			this->dataGridViewSupprCo->Dock = System::Windows::Forms::DockStyle::Top;
-			this->dataGridViewSupprCo->Location = System::Drawing::Point(100, 122);
+			this->dataGridViewSupprCo->Location = System::Drawing::Point(0, 122);
 			this->dataGridViewSupprCo->Name = L"dataGridViewSupprCo";
-			this->dataGridViewSupprCo->Size = System::Drawing::Size(522, 186);
+			this->dataGridViewSupprCo->Size = System::Drawing::Size(622, 186);
 			this->dataGridViewSupprCo->TabIndex = 7;
 			// 
 			// panel6
@@ -176,9 +152,9 @@ namespace POO_Projet_Babagge {
 			this->panel6->Controls->Add(this->textBox2);
 			this->panel6->Controls->Add(this->label3);
 			this->panel6->Dock = System::Windows::Forms::DockStyle::Top;
-			this->panel6->Location = System::Drawing::Point(100, 308);
+			this->panel6->Location = System::Drawing::Point(0, 308);
 			this->panel6->Name = L"panel6";
-			this->panel6->Size = System::Drawing::Size(522, 60);
+			this->panel6->Size = System::Drawing::Size(622, 60);
 			this->panel6->TabIndex = 8;
 			// 
 			// button2
@@ -229,10 +205,8 @@ namespace POO_Projet_Babagge {
 			this->Controls->Add(this->dataGridViewSupprCo);
 			this->Controls->Add(this->panel4);
 			this->Controls->Add(this->label1);
-			this->Controls->Add(this->panel1);
 			this->Name = L"FormSupprCo";
 			this->Text = L"FormSupprCo";
-			this->panel1->ResumeLayout(false);
 			this->panel4->ResumeLayout(false);
 			this->panel4->PerformLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridViewSupprCo))->EndInit();

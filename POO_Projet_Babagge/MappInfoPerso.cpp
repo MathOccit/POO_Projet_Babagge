@@ -56,6 +56,21 @@ void NS_Comp_Mappage::MappInfoPerso::setIDstr(String^ ID)
 	this->IDstr = ID;
 }
 
+void NS_Comp_Mappage::MappInfoPerso::setIDCl(String^ IDCl)
+{
+	this->IDCl = IDCl;
+}
+
+void NS_Comp_Mappage::MappInfoPerso::setIDAdd(String^ IDAdd)
+{
+	this->IDAdd = IDAdd;
+}
+
+void NS_Comp_Mappage::MappInfoPerso::setIDGeo(String^ IDGeo)
+{
+	this->IDGeo = IDGeo;
+}
+
 void NS_Comp_Mappage::MappInfoPerso::setNom(System::String^ nom) 
 {
 	this->nom = nom;
@@ -114,7 +129,7 @@ System::String^ NS_Comp_Mappage::MappInfoPerso::Inserer(void)
 
 System::String^ NS_Comp_Mappage::MappInfoPerso::Modifier(void) 
 {
-	return "update client SET nom_client '" + this->nom + "', prenom_client '" + this->prenom + "', date_de_naissance '" + this->naissance + "', numero_tel_client '" + this->telephone + "', adresse_mail_client '" + this->mail + "' update adresse SET num_voie '" + this->numeroRue + "', nom_voie '" + this->nomRue + "' update geographie SET ville '" + this->ville + "', pays'" + this->pays + "', WHERE(id_personne = '" + this->IDstr + ");";
+	return "UPDATE [DonneBDD_Test10].[dbo].[client] SET [client].[nom_client] = '" + this->nom + "', [client].[prenom_client] = '" + this->prenom + "', [client].[date_de_naissance] = '" + this->naissance + "', [client].[numero_tel_client] = '" + this->telephone + "', [client].[adresse_mail_client] ='" + this->mail + "' WHERE [client].[id_client] = '" + this->IDCl + "' ; UPDATE [DonneBDD_Test10].[dbo].[adresse] SET [adresse].[num_voie] = '" + this->numeroRue + "', [adresse].[nom_voie] ='" + this->nomRue + "' WHERE [adresse].[id_adresse] = '" + this->IDAdd + "' ; UPDATE [DonneBDD_Test10].[dbo].[geographie] SET [geographie].[ville] = '" + this->ville + "' , [geographie].[pays]= '" + this->pays + "'WHERE [geographie].[id_geographie] = '" + this->IDGeo + "';";
 }
 
 System::String^ NS_Comp_Mappage::MappInfoPerso::Suppr(void) 

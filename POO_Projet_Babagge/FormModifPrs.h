@@ -1,5 +1,5 @@
 #pragma once
-#include "ServiceClient.h"
+#include "pch.h"
 
 namespace POO_Projet_Babagge {
 
@@ -11,12 +11,12 @@ namespace POO_Projet_Babagge {
 	using namespace System::Drawing;
 
 	/// <summary>
-	/// Description résumée de FormModifCl
+	/// Description résumée de FormModifPrs
 	/// </summary>
-	public ref class FormModifCl : public System::Windows::Forms::Form
+	public ref class FormModifPrs : public System::Windows::Forms::Form
 	{
 	public:
-		FormModifCl(void)
+		FormModifPrs(void)
 		{
 			InitializeComponent();
 			//
@@ -28,7 +28,7 @@ namespace POO_Projet_Babagge {
 		/// <summary>
 		/// Nettoyage des ressources utilisées.
 		/// </summary>
-		~FormModifCl()
+		~FormModifPrs()
 		{
 			if (components)
 			{
@@ -39,26 +39,30 @@ namespace POO_Projet_Babagge {
 	protected:
 
 	private: System::Windows::Forms::Label^ label1;
-	private: System::Windows::Forms::Button^ button3;
-	private: System::Windows::Forms::Panel^ panel6;
-	private: System::Windows::Forms::TextBox^ textBox2;
-	private: System::Windows::Forms::Label^ label3;
-	private: System::Windows::Forms::Panel^ panel5;
-	private: System::Windows::Forms::DataGridView^ dataGridViewModifCl;
-
 	private: System::Windows::Forms::Panel^ panel4;
 	private: System::Windows::Forms::TextBox^ textBox1;
 	private: System::Windows::Forms::Label^ label4;
 	private: System::Windows::Forms::TextBox^ textBox_modif;
-
 	private: System::Windows::Forms::Label^ label2;
-	private: System::Data::DataSet^ oDsCl;
-	private: NS_Comp_Svc::ServiceClient^ oSvcCl = gcnew NS_Comp_Svc::ServiceClient;
+	private: System::Windows::Forms::DataGridView^ dataGridViewModifCl;
+	private: System::Windows::Forms::Panel^ panel6;
 	private: System::Windows::Forms::Label^ label6;
 	private: System::Windows::Forms::TextBox^ textBox4;
 	private: System::Windows::Forms::TextBox^ textBox3;
 	private: System::Windows::Forms::Label^ label5;
+	private: System::Windows::Forms::TextBox^ textBox2;
+	private: System::Windows::Forms::Label^ label3;
 	private: System::Windows::Forms::Panel^ panel2;
+	private: System::Windows::Forms::Panel^ panel7;
+	private: System::Windows::Forms::Label^ label15;
+	private: System::Windows::Forms::TextBox^ textBox10;
+	private: System::Windows::Forms::TextBox^ textBox13;
+	private: System::Windows::Forms::Label^ label12;
+	private: System::Windows::Forms::Label^ label14;
+	private: System::Windows::Forms::TextBox^ textBox11;
+	private: System::Windows::Forms::Button^ button3;
+	private: System::Windows::Forms::TextBox^ textBox12;
+	private: System::Windows::Forms::Label^ label13;
 	private: System::Windows::Forms::TextBox^ textBox9;
 	private: System::Windows::Forms::Label^ label11;
 	private: System::Windows::Forms::TextBox^ textBox8;
@@ -69,16 +73,12 @@ namespace POO_Projet_Babagge {
 	private: System::Windows::Forms::Label^ label8;
 	private: System::Windows::Forms::TextBox^ textBox5;
 	private: System::Windows::Forms::Label^ label7;
-	private: System::Windows::Forms::Panel^ panel7;
-	private: System::Windows::Forms::Label^ label15;
-	private: System::Windows::Forms::TextBox^ textBox10;
-	private: System::Windows::Forms::TextBox^ textBox13;
-	private: System::Windows::Forms::Label^ label12;
-	private: System::Windows::Forms::Label^ label14;
-	private: System::Windows::Forms::TextBox^ textBox11;
-	private: System::Windows::Forms::TextBox^ textBox12;
-	private: System::Windows::Forms::Label^ label13;
-
+	private: System::Windows::Forms::TextBox^ textBox14;
+	private: System::Windows::Forms::Label^ label16;
+	private: System::Windows::Forms::TextBox^ textBox15;
+	private: System::Windows::Forms::Label^ label17;
+	private: System::Data::DataSet^ oDsPrs;
+	private: NS_Comp_Svc::ServicePersonnel^ oSvcPrs = gcnew NS_Comp_Svc::ServicePersonnel;
 
 	private:
 		/// <summary>
@@ -93,9 +93,14 @@ namespace POO_Projet_Babagge {
 		/// </summary>
 		void InitializeComponent(void)
 		{
-			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(FormModifCl::typeid));
+			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(FormModifPrs::typeid));
 			this->label1 = (gcnew System::Windows::Forms::Label());
-			this->button3 = (gcnew System::Windows::Forms::Button());
+			this->panel4 = (gcnew System::Windows::Forms::Panel());
+			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
+			this->label4 = (gcnew System::Windows::Forms::Label());
+			this->textBox_modif = (gcnew System::Windows::Forms::TextBox());
+			this->label2 = (gcnew System::Windows::Forms::Label());
+			this->dataGridViewModifCl = (gcnew System::Windows::Forms::DataGridView());
 			this->panel6 = (gcnew System::Windows::Forms::Panel());
 			this->label6 = (gcnew System::Windows::Forms::Label());
 			this->textBox4 = (gcnew System::Windows::Forms::TextBox());
@@ -103,14 +108,11 @@ namespace POO_Projet_Babagge {
 			this->label5 = (gcnew System::Windows::Forms::Label());
 			this->textBox2 = (gcnew System::Windows::Forms::TextBox());
 			this->label3 = (gcnew System::Windows::Forms::Label());
-			this->panel5 = (gcnew System::Windows::Forms::Panel());
-			this->dataGridViewModifCl = (gcnew System::Windows::Forms::DataGridView());
-			this->panel4 = (gcnew System::Windows::Forms::Panel());
-			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
-			this->label4 = (gcnew System::Windows::Forms::Label());
-			this->textBox_modif = (gcnew System::Windows::Forms::TextBox());
-			this->label2 = (gcnew System::Windows::Forms::Label());
 			this->panel2 = (gcnew System::Windows::Forms::Panel());
+			this->textBox14 = (gcnew System::Windows::Forms::TextBox());
+			this->label16 = (gcnew System::Windows::Forms::Label());
+			this->textBox15 = (gcnew System::Windows::Forms::TextBox());
+			this->label17 = (gcnew System::Windows::Forms::Label());
 			this->panel7 = (gcnew System::Windows::Forms::Panel());
 			this->label15 = (gcnew System::Windows::Forms::Label());
 			this->textBox10 = (gcnew System::Windows::Forms::TextBox());
@@ -118,6 +120,7 @@ namespace POO_Projet_Babagge {
 			this->label12 = (gcnew System::Windows::Forms::Label());
 			this->label14 = (gcnew System::Windows::Forms::Label());
 			this->textBox11 = (gcnew System::Windows::Forms::TextBox());
+			this->button3 = (gcnew System::Windows::Forms::Button());
 			this->textBox12 = (gcnew System::Windows::Forms::TextBox());
 			this->label13 = (gcnew System::Windows::Forms::Label());
 			this->textBox9 = (gcnew System::Windows::Forms::TextBox());
@@ -130,39 +133,86 @@ namespace POO_Projet_Babagge {
 			this->label8 = (gcnew System::Windows::Forms::Label());
 			this->textBox5 = (gcnew System::Windows::Forms::TextBox());
 			this->label7 = (gcnew System::Windows::Forms::Label());
-			this->panel6->SuspendLayout();
-			this->panel5->SuspendLayout();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridViewModifCl))->BeginInit();
 			this->panel4->SuspendLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridViewModifCl))->BeginInit();
+			this->panel6->SuspendLayout();
 			this->panel2->SuspendLayout();
 			this->panel7->SuspendLayout();
 			this->SuspendLayout();
 			// 
 			// label1
 			// 
-			this->label1->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)), static_cast<System::Int32>(static_cast<System::Byte>(131)),
-				static_cast<System::Int32>(static_cast<System::Byte>(85)));
+			this->label1->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(141)), static_cast<System::Int32>(static_cast<System::Byte>(156)),
+				static_cast<System::Int32>(static_cast<System::Byte>(116)));
 			this->label1->Dock = System::Windows::Forms::DockStyle::Top;
 			this->label1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 39.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label1->Location = System::Drawing::Point(0, 0);
 			this->label1->Name = L"label1";
 			this->label1->Size = System::Drawing::Size(1366, 150);
-			this->label1->TabIndex = 16;
-			this->label1->Text = L"Modifier un profil Client";
+			this->label1->TabIndex = 17;
+			this->label1->Text = L"Modifier un profil de personnel";
 			this->label1->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
 			// 
-			// button3
+			// panel4
 			// 
-			this->button3->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button3.Image")));
-			this->button3->Location = System::Drawing::Point(450, 271);
-			this->button3->Name = L"button3";
-			this->button3->Size = System::Drawing::Size(75, 27);
-			this->button3->TabIndex = 23;
-			this->button3->Text = L"Valider";
-			this->button3->TextImageRelation = System::Windows::Forms::TextImageRelation::ImageBeforeText;
-			this->button3->UseVisualStyleBackColor = true;
-			this->button3->Click += gcnew System::EventHandler(this, &FormModifCl::button3_Click);
+			this->panel4->Controls->Add(this->textBox1);
+			this->panel4->Controls->Add(this->label4);
+			this->panel4->Controls->Add(this->textBox_modif);
+			this->panel4->Controls->Add(this->label2);
+			this->panel4->Dock = System::Windows::Forms::DockStyle::Top;
+			this->panel4->Location = System::Drawing::Point(0, 150);
+			this->panel4->Name = L"panel4";
+			this->panel4->Size = System::Drawing::Size(1366, 52);
+			this->panel4->TabIndex = 21;
+			// 
+			// textBox1
+			// 
+			this->textBox1->Location = System::Drawing::Point(556, 15);
+			this->textBox1->Name = L"textBox1";
+			this->textBox1->Size = System::Drawing::Size(117, 20);
+			this->textBox1->TabIndex = 6;
+			this->textBox1->TextChanged += gcnew System::EventHandler(this, &FormModifPrs::RchrchPrnmPrs);
+			// 
+			// label4
+			// 
+			this->label4->AutoSize = true;
+			this->label4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label4->Location = System::Drawing::Point(350, 10);
+			this->label4->Name = L"label4";
+			this->label4->Size = System::Drawing::Size(200, 24);
+			this->label4->TabIndex = 5;
+			this->label4->Text = L"Prenom de l\'employé :";
+			// 
+			// textBox_modif
+			// 
+			this->textBox_modif->Location = System::Drawing::Point(187, 13);
+			this->textBox_modif->Name = L"textBox_modif";
+			this->textBox_modif->Size = System::Drawing::Size(117, 20);
+			this->textBox_modif->TabIndex = 3;
+			this->textBox_modif->TextChanged += gcnew System::EventHandler(this, &FormModifPrs::RchrchNmPrs);
+			// 
+			// label2
+			// 
+			this->label2->AutoSize = true;
+			this->label2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label2->Location = System::Drawing::Point(7, 9);
+			this->label2->Name = L"label2";
+			this->label2->Size = System::Drawing::Size(174, 24);
+			this->label2->TabIndex = 2;
+			this->label2->Text = L"Nom de l\'employé :";
+			// 
+			// dataGridViewModifCl
+			// 
+			this->dataGridViewModifCl->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
+			this->dataGridViewModifCl->Dock = System::Windows::Forms::DockStyle::Top;
+			this->dataGridViewModifCl->Location = System::Drawing::Point(0, 202);
+			this->dataGridViewModifCl->Name = L"dataGridViewModifCl";
+			this->dataGridViewModifCl->Size = System::Drawing::Size(1366, 186);
+			this->dataGridViewModifCl->TabIndex = 22;
+			this->dataGridViewModifCl->CellClick += gcnew System::Windows::Forms::DataGridViewCellEventHandler(this, &FormModifPrs::RecupDon);
 			// 
 			// panel6
 			// 
@@ -176,7 +226,7 @@ namespace POO_Projet_Babagge {
 			this->panel6->Location = System::Drawing::Point(0, 388);
 			this->panel6->Name = L"panel6";
 			this->panel6->Size = System::Drawing::Size(289, 310);
-			this->panel6->TabIndex = 22;
+			this->panel6->TabIndex = 23;
 			// 
 			// label6
 			// 
@@ -237,77 +287,12 @@ namespace POO_Projet_Babagge {
 			this->label3->TabIndex = 2;
 			this->label3->Text = L"ID du profil :";
 			// 
-			// panel5
-			// 
-			this->panel5->Controls->Add(this->dataGridViewModifCl);
-			this->panel5->Dock = System::Windows::Forms::DockStyle::Top;
-			this->panel5->Location = System::Drawing::Point(0, 202);
-			this->panel5->Name = L"panel5";
-			this->panel5->Size = System::Drawing::Size(1366, 186);
-			this->panel5->TabIndex = 21;
-			// 
-			// dataGridViewModifCl
-			// 
-			this->dataGridViewModifCl->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
-			this->dataGridViewModifCl->Dock = System::Windows::Forms::DockStyle::Fill;
-			this->dataGridViewModifCl->Location = System::Drawing::Point(0, 0);
-			this->dataGridViewModifCl->Name = L"dataGridViewModifCl";
-			this->dataGridViewModifCl->Size = System::Drawing::Size(1366, 186);
-			this->dataGridViewModifCl->TabIndex = 0;
-			this->dataGridViewModifCl->CellClick += gcnew System::Windows::Forms::DataGridViewCellEventHandler(this, &FormModifCl::RecupDon);
-			// 
-			// panel4
-			// 
-			this->panel4->Controls->Add(this->textBox1);
-			this->panel4->Controls->Add(this->label4);
-			this->panel4->Controls->Add(this->textBox_modif);
-			this->panel4->Controls->Add(this->label2);
-			this->panel4->Dock = System::Windows::Forms::DockStyle::Top;
-			this->panel4->Location = System::Drawing::Point(0, 150);
-			this->panel4->Name = L"panel4";
-			this->panel4->Size = System::Drawing::Size(1366, 52);
-			this->panel4->TabIndex = 20;
-			// 
-			// textBox1
-			// 
-			this->textBox1->Location = System::Drawing::Point(519, 15);
-			this->textBox1->Name = L"textBox1";
-			this->textBox1->Size = System::Drawing::Size(117, 20);
-			this->textBox1->TabIndex = 6;
-			this->textBox1->TextChanged += gcnew System::EventHandler(this, &FormModifCl::RchrchPrnmClModif);
-			// 
-			// label4
-			// 
-			this->label4->AutoSize = true;
-			this->label4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->label4->Location = System::Drawing::Point(350, 10);
-			this->label4->Name = L"label4";
-			this->label4->Size = System::Drawing::Size(163, 24);
-			this->label4->TabIndex = 5;
-			this->label4->Text = L"Prenom du client :";
-			// 
-			// textBox_modif
-			// 
-			this->textBox_modif->Location = System::Drawing::Point(150, 14);
-			this->textBox_modif->Name = L"textBox_modif";
-			this->textBox_modif->Size = System::Drawing::Size(117, 20);
-			this->textBox_modif->TabIndex = 3;
-			this->textBox_modif->TextChanged += gcnew System::EventHandler(this, &FormModifCl::RchrchNmClModif);
-			// 
-			// label2
-			// 
-			this->label2->AutoSize = true;
-			this->label2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->label2->Location = System::Drawing::Point(7, 10);
-			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(137, 24);
-			this->label2->TabIndex = 2;
-			this->label2->Text = L"Nom du client :";
-			// 
 			// panel2
 			// 
+			this->panel2->Controls->Add(this->textBox14);
+			this->panel2->Controls->Add(this->label16);
+			this->panel2->Controls->Add(this->textBox15);
+			this->panel2->Controls->Add(this->label17);
 			this->panel2->Controls->Add(this->panel7);
 			this->panel2->Controls->Add(this->textBox9);
 			this->panel2->Controls->Add(this->label11);
@@ -323,7 +308,45 @@ namespace POO_Projet_Babagge {
 			this->panel2->Location = System::Drawing::Point(289, 388);
 			this->panel2->Name = L"panel2";
 			this->panel2->Size = System::Drawing::Size(1077, 309);
-			this->panel2->TabIndex = 28;
+			this->panel2->TabIndex = 29;
+			// 
+			// textBox14
+			// 
+			this->textBox14->Location = System::Drawing::Point(333, 75);
+			this->textBox14->Name = L"textBox14";
+			this->textBox14->Size = System::Drawing::Size(117, 20);
+			this->textBox14->TabIndex = 36;
+			// 
+			// label16
+			// 
+			this->label16->AutoSize = true;
+			this->label16->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label16->Location = System::Drawing::Point(241, 71);
+			this->label16->Margin = System::Windows::Forms::Padding(3, 25, 3, 0);
+			this->label16->Name = L"label16";
+			this->label16->Size = System::Drawing::Size(86, 24);
+			this->label16->TabIndex = 35;
+			this->label16->Text = L"Titulaire :";
+			// 
+			// textBox15
+			// 
+			this->textBox15->Location = System::Drawing::Point(416, 26);
+			this->textBox15->Name = L"textBox15";
+			this->textBox15->Size = System::Drawing::Size(117, 20);
+			this->textBox15->TabIndex = 34;
+			// 
+			// label17
+			// 
+			this->label17->AutoSize = true;
+			this->label17->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label17->Location = System::Drawing::Point(241, 22);
+			this->label17->Margin = System::Windows::Forms::Padding(3, 25, 3, 0);
+			this->label17->Name = L"label17";
+			this->label17->Size = System::Drawing::Size(169, 24);
+			this->label17->TabIndex = 33;
+			this->label17->Text = L"Date d\'embauche :";
 			// 
 			// panel7
 			// 
@@ -337,9 +360,9 @@ namespace POO_Projet_Babagge {
 			this->panel7->Controls->Add(this->textBox12);
 			this->panel7->Controls->Add(this->label13);
 			this->panel7->Dock = System::Windows::Forms::DockStyle::Right;
-			this->panel7->Location = System::Drawing::Point(540, 0);
+			this->panel7->Location = System::Drawing::Point(581, 0);
 			this->panel7->Name = L"panel7";
-			this->panel7->Size = System::Drawing::Size(537, 309);
+			this->panel7->Size = System::Drawing::Size(496, 309);
 			this->panel7->TabIndex = 32;
 			// 
 			// label15
@@ -398,6 +421,18 @@ namespace POO_Projet_Babagge {
 			this->textBox11->Name = L"textBox11";
 			this->textBox11->Size = System::Drawing::Size(117, 20);
 			this->textBox11->TabIndex = 29;
+			// 
+			// button3
+			// 
+			this->button3->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button3.Image")));
+			this->button3->Location = System::Drawing::Point(409, 271);
+			this->button3->Name = L"button3";
+			this->button3->Size = System::Drawing::Size(75, 27);
+			this->button3->TabIndex = 23;
+			this->button3->Text = L"Valider";
+			this->button3->TextImageRelation = System::Windows::Forms::TextImageRelation::ImageBeforeText;
+			this->button3->UseVisualStyleBackColor = true;
+			this->button3->Click += gcnew System::EventHandler(this, &FormModifPrs::button3_Click);
 			// 
 			// textBox12
 			// 
@@ -513,25 +548,23 @@ namespace POO_Projet_Babagge {
 			this->label7->TabIndex = 7;
 			this->label7->Text = L"Nom :";
 			// 
-			// FormModifCl
+			// FormModifPrs
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(1366, 698);
 			this->Controls->Add(this->panel2);
 			this->Controls->Add(this->panel6);
-			this->Controls->Add(this->panel5);
+			this->Controls->Add(this->dataGridViewModifCl);
 			this->Controls->Add(this->panel4);
 			this->Controls->Add(this->label1);
-			this->Name = L"FormModifCl";
-			this->Text = L"FormModifCl";
-			this->TextChanged += gcnew System::EventHandler(this, &FormModifCl::RchrchNmClModif);
-			this->panel6->ResumeLayout(false);
-			this->panel6->PerformLayout();
-			this->panel5->ResumeLayout(false);
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridViewModifCl))->EndInit();
+			this->Name = L"FormModifPrs";
+			this->Text = L"FormModifPrs";
 			this->panel4->ResumeLayout(false);
 			this->panel4->PerformLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridViewModifCl))->EndInit();
+			this->panel6->ResumeLayout(false);
+			this->panel6->PerformLayout();
 			this->panel2->ResumeLayout(false);
 			this->panel2->PerformLayout();
 			this->panel7->ResumeLayout(false);
@@ -540,54 +573,56 @@ namespace POO_Projet_Babagge {
 
 		}
 #pragma endregion
-	private: System::Void RchrchNmClModif(System::Object^ sender, System::EventArgs^ e) 
+	private: System::Void RchrchNmPrs(System::Object^ sender, System::EventArgs^ e) 
 	{
-		this->oDsCl = this->oSvcCl->RechercherModif(textBox_modif->Text, textBox1->Text, "ClN");
-		this->dataGridViewModifCl->DataSource = this->oDsCl;
-		this->dataGridViewModifCl->DataMember = "ClN";
+		this->oDsPrs = this->oSvcPrs->RechercherModif(textBox_modif->Text, textBox1->Text, "PrsN");
+		this->dataGridViewModifCl->DataSource = this->oDsPrs;
+		this->dataGridViewModifCl->DataMember = "PrsN";
 	}
-private: System::Void RchrchPrnmClModif(System::Object^ sender, System::EventArgs^ e) 
+private: System::Void RchrchPrnmPrs(System::Object^ sender, System::EventArgs^ e) 
 {
-	this->oDsCl = this->oSvcCl->RechercherModif(textBox_modif->Text, textBox1->Text, "ClN");
-	this->dataGridViewModifCl->DataSource = this->oDsCl;
-	this->dataGridViewModifCl->DataMember = "ClN";
+	this->oDsPrs = this->oSvcPrs->RechercherModif(textBox_modif->Text, textBox1->Text, "PrsPrn");
+	this->dataGridViewModifCl->DataSource = this->oDsPrs;
+	this->dataGridViewModifCl->DataMember = "PrsPrn";
 }
-
 private: System::Void RecupDon(System::Object^ sender, System::Windows::Forms::DataGridViewCellEventArgs^ e) 
 {
 	DataGridViewRow^ row = dataGridViewModifCl->CurrentRow;
-	String^ IDClient = row->Cells["id_client"]->Value->ToString();
-	String^ IDAdresse = row->Cells["id_adresse"]->Value->ToString(); 
+	String^ IDpersonnel = row->Cells["id_personnel"]->Value->ToString();
+	String^ IDAdresse = row->Cells["id_adresse"]->Value->ToString();
 	String^ IDGeographie = row->Cells["id_geographie"]->Value->ToString();
-	String^ NomClient = row->Cells["nom_client"]->Value->ToString();
-	String^ PrenomClient = row->Cells["prenom_client"]->Value->ToString();
-	String^ DateClient = row->Cells["date_de_naissance"]->Value->ToString();
-	String^ NumClient = row->Cells["numero_tel_client"]->Value->ToString();
-	String^ MailClient = row->Cells["adresse_mail_client"]->Value->ToString();
+	String^ Nompersonnel = row->Cells["nom_personnel"]->Value->ToString();
+	String^ Prenompersonnel = row->Cells["prenom_personnel"]->Value->ToString();
+	String^ Datepersonnel = row->Cells["naissance_personnel"]->Value->ToString();
+	String^ Numpersonnel = row->Cells["numero_tel_personnel"]->Value->ToString();
+	String^ Mailpersonnel = row->Cells["adresse_mail_personnel"]->Value->ToString();
 	String^ NumVoie = row->Cells["num_voie"]->Value->ToString();
 	String^ NomVoie = row->Cells["nom_voie"]->Value->ToString();
 	String^ Ville = row->Cells["ville"]->Value->ToString();
 	String^ Pays = row->Cells["pays"]->Value->ToString();
+	String^ DateEmbauche = row->Cells["date_embauche"]->Value->ToString();
+	String^ Titulaire = row->Cells["titulaire"]->Value->ToString();
 
 
-	textBox2->Text = IDClient;
+	textBox2->Text = IDpersonnel;
 	textBox3->Text = IDAdresse;
 	textBox4->Text = IDGeographie;
-	textBox5->Text = NomClient;
-	textBox6->Text = PrenomClient;
-	textBox7->Text = DateClient;
-	textBox8->Text = NumClient;
-	textBox9->Text = MailClient;
+	textBox5->Text = Nompersonnel;
+	textBox6->Text = Prenompersonnel;
+	textBox7->Text = Datepersonnel;
+	textBox8->Text = Numpersonnel;
+	textBox9->Text = Mailpersonnel;
 	textBox10->Text = Pays;
 	textBox11->Text = Ville;
 	textBox12->Text = NomVoie;
 	textBox13->Text = NumVoie;
-
+	textBox14->Text = Titulaire;
+	textBox15->Text = DateEmbauche;
 }
 private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) 
 {
-	oSvcCl = gcnew NS_Comp_Svc::ServiceClient;
-	
+	oSvcPrs = gcnew NS_Comp_Svc::ServicePersonnel;
+
 	String^ IDClient = textBox2->Text;
 	String^ IDAdresse = textBox3->Text;
 	String^ IDGeographie = textBox4->Text;
@@ -600,8 +635,10 @@ private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e
 	String^ Ville = textBox11->Text;
 	String^ NomVoie = textBox12->Text;
 	String^ NumVoie = textBox13->Text;
+	String^ Titulaire = textBox14->Text ;
+	String^ DateEmbauche = textBox15->Text;
 
-	this->oSvcCl->ModifierUnClient(IDClient, IDAdresse, IDGeographie, NomClient, PrenomClient, DateClient, NumClient, MailClient, NumVoie, NomVoie, Ville, Pays);
+	this->oSvcPrs->ModifierUnPersonnel(IDClient, IDAdresse, IDGeographie, NomClient, PrenomClient, DateClient, NumClient, MailClient, NumVoie, NomVoie, Ville, Pays, DateEmbauche, Titulaire);
 	this->Close();
 }
 

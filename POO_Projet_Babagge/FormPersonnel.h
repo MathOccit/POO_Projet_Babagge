@@ -2,6 +2,8 @@
 #include "pch.h"
 #include "ServicePersonnel.h"
 #include "FormSupprPrs.h"
+#include "FormModifPrs.h"
+#include "FormAjoutPrs.h"
 
 namespace POO_Projet_Babagge {
 
@@ -51,6 +53,8 @@ namespace POO_Projet_Babagge {
 	private: System::Windows::Forms::Label^ label1;
 	private: System::Windows::Forms::Label^ label2;
 	private: POO_Projet_Babagge::FormSupprPrs^ FormSupprPrs;
+	private: POO_Projet_Babagge::FormModifPrs^ FormModifPrs;
+	private: POO_Projet_Babagge::Inserer_Personnel^ insererPersonnel;
 	protected:
 
 	private:
@@ -107,6 +111,7 @@ namespace POO_Projet_Babagge {
 			this->button4->TabIndex = 11;
 			this->button4->Text = L"Inserer";
 			this->button4->UseVisualStyleBackColor = true;
+			this->button4->Click += gcnew System::EventHandler(this, &FormPersonnel::button4_Click);
 			// 
 			// button3
 			// 
@@ -128,6 +133,7 @@ namespace POO_Projet_Babagge {
 			this->button2->TabIndex = 9;
 			this->button2->Text = L"Modifier";
 			this->button2->UseVisualStyleBackColor = true;
+			this->button2->Click += gcnew System::EventHandler(this, &FormPersonnel::button2_Click);
 			// 
 			// textBox2
 			// 
@@ -212,5 +218,20 @@ private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e
 	FormSupprPrs->Show();
 }
 
+private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) 
+{
+	FormModifPrs = gcnew POO_Projet_Babagge::FormModifPrs;
+	FormModifPrs->Show();
+}
+
+private: System::Void button_inserer_Click(System::Object^ sender, System::EventArgs^ e) {
+    insererPersonnel = gcnew POO_Projet_Babagge::Inserer_Personnel;
+    insererPersonnel->Show();
+    dataGridViewPerso->Refresh();
+}
+private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e) {
+	insererPersonnel = gcnew POO_Projet_Babagge::Inserer_Personnel;
+	insererPersonnel->Show();
+}
 };
 }

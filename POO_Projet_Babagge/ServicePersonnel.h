@@ -15,9 +15,10 @@ namespace NS_Comp_Svc
 		ServicePersonnel(void);
 		Data::DataSet^ SelectionnerTousLesPersonnels(String^);
 		void AjouterUnPersonnel(String^, String^, String^, String^, String^, String^, String^, String^, String^, String^, String^);
-		void ModifierUnPersonnel(String^, String^, String^, String^, String^, String^, String^, String^, String^, String^, String^);
+		void ModifierUnPersonnel(String^, String^, String^, String^, String^, String^, String^, String^, String^, String^, String^, String^, String^, String^);
 		void AfficherUnPersonnel(int);
 		void SupprimerUnPersonnel(String^);
 		Data::DataSet^ Rechercher(String^, String^, String^);
+		Data::DataSet^ RechercherModif(String^, String^, String^);
 	};
 }

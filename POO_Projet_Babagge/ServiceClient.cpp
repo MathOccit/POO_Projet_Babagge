@@ -1,4 +1,5 @@
 #include "pch.h"
+#include "GCompAD.h"
 
 using namespace System;
 
@@ -65,9 +66,12 @@ void NS_Comp_Svc::ServiceClient::AjouterUnClient(String^ nom, String^ prenom, St
 
 }
 
-void NS_Comp_Svc::ServiceClient::ModifierUnClient(String^ nom, String^ prenom, String^ naissance, String^ telephone, String^ mail, String^ numeroRue, String^ nomRue, String^ ville, String^ pays) {
+void NS_Comp_Svc::ServiceClient::ModifierUnClient(String^ IDCl, String^ IDAdd, String^ IDGeo, String^ nom, String^ prenom, String^ naissance, String^ telephone, String^ mail, String^ numeroRue, String^ nomRue, String^ ville, String^ pays) {
     String^ sql;
-    return this->oCad_Client->actionRows(sql);
+  
+    this->oMappInfoPerso->setIDCl(IDCl);
+    this->oMappInfoPerso->setIDAdd(IDAdd);
+    this->oMappInfoPerso->setIDGeo(IDGeo);
     this->oMappInfoPerso->setNom(nom);
     this->oMappInfoPerso->setPrenom(prenom);
     this->oMappInfoPerso->setNaissance(naissance);

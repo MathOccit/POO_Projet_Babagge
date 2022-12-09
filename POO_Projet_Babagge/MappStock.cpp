@@ -12,19 +12,19 @@ System::String^ NS_Comp_Mappage::MappStock::getNomArticle() {
 System::String^ NS_Comp_Mappage::MappStock::getCategorieArticle() {
 	return this->categorieArticle;
 }
-int^ NS_Comp_Mappage::MappStock::getQuantite() {
+String^ NS_Comp_Mappage::MappStock::getQuantite() {
 	return this->quantite;
 }
-double^ NS_Comp_Mappage::MappStock::getPrixArticleHT() {
+String^ NS_Comp_Mappage::MappStock::getPrixArticleHT() {
 	return this->prixArticleHT;
 }
-System::String^ NS_Comp_Mappage::MappStock::getPrixArticleTVA() {
+String^ NS_Comp_Mappage::MappStock::getPrixArticleTVA() {
 	return this->prixArticleTVA;
 }
-int^ NS_Comp_Mappage::MappStock::getrefArticle() {
+String^ NS_Comp_Mappage::MappStock::getrefArticle() {
 	return this->refArticle;
 }
-int^ NS_Comp_Mappage::MappStock::getseuilReappro() {
+String^ NS_Comp_Mappage::MappStock::getseuilReappro() {
 	return this->seuilReappro;
 }
 System::String^ NS_Comp_Mappage::MappStock::getdesignationArticle() {
@@ -38,19 +38,22 @@ void NS_Comp_Mappage::MappStock::setNomArticle(String^ nomArticle) {
 void NS_Comp_Mappage::MappStock::setCategorieArticle(String^ categorieArticle) {
 	this->categorieArticle = categorieArticle;
 }
-void NS_Comp_Mappage::MappStock::setQuantite(int^ quantite) {
+void NS_Comp_Mappage::MappStock::setQuantite(String^ quantite) {
 	this->quantite = quantite;
 }
-void NS_Comp_Mappage::MappStock::setPrixArticleHT(double^ prixArticleHT) {
+void NS_Comp_Mappage::MappStock::setPrixArticleHT(String^ prixArticleHT) {
 	this->prixArticleHT = prixArticleHT;
+}
+void NS_Comp_Mappage::MappStock::setMarge(String^ Marge) {
+	this->Marge = Marge;
 }
 void NS_Comp_Mappage::MappStock::setPrixArticleTVA(String^ prixArticleTVA) {
 	this->prixArticleTVA = prixArticleTVA;
 }
-void NS_Comp_Mappage::MappStock::setrefArticle(int^ refArticle) {
+void NS_Comp_Mappage::MappStock::setrefArticle(String^ refArticle) {
 	this->refArticle = refArticle;
 }
-void NS_Comp_Mappage::MappStock::setseuilReappro(int^ seuilReappro) {
+void NS_Comp_Mappage::MappStock::setseuilReappro(String^ seuilReappro) {
 	this->seuilReappro = seuilReappro;
 }
 void NS_Comp_Mappage::MappStock::setdesignationArticle(String^ designationArticle) {
@@ -69,7 +72,7 @@ String^ NS_Comp_Mappage::MappStock::Selectionner() {
 }
 String^ NS_Comp_Mappage::MappStock::Modifier() {
 
-	return "UPDATE stock " + "SET nom_article = '" + this->nomArticle + "', categorie_article = '" + this->categorieArticle + "' quantite = '" + this->quantite + "'prix_article_ht ='" + this->prixArticleHT + "'prix_article_tva= '" + this->prixArticleTVA + "'ref_article ='" + this->refArticle + "'seuil_reappro ='" + this->seuilReappro + "'designation_article ='" + this->designationArticle + "'WHERE(id_personne = '" + this->getID() + ");";
+	return "UPDATE [DonneBDD_Test10].[dbo].[stock] SET [stock].[nom_article] = '" + this->nomArticle + " ', [stock].[categorie_article] = ' " + this->categorieArticle + " ', [stock].[quantite] = '" + this->quantite + " ', [stock].[prix_article_ht] =  " + this->prixArticleHT + ", [stock].[prix_article_tva] =" + this->prixArticleTVA + ", [stock].[marge] =" + this->Marge + ", [stock].[ref_article] ='" + this->refArticle + "', [stock].[designation_article] ='" + this->designationArticle + "', [stock].[seuil_reappro] ='" + this->seuilReappro + "' WHERE [stock].[id_stock] = '" + this->ID + "';";
 }
 
 String^ NS_Comp_Mappage::MappStock::Supprimer() {

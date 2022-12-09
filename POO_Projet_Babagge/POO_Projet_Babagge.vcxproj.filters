@@ -71,13 +71,10 @@
     <ClInclude Include="FormClient.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="FormAjoutPrs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="FormAjoutCl.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="MyForm4.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="MyForm5.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="FormStock.h">
@@ -89,7 +86,7 @@
     <ClInclude Include="FormPersonnel.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="MyForm9.h">
+    <ClInclude Include="FormStat.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="FormSupprCo.h">
@@ -102,6 +99,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="FormModifCl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FormModifPrs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FormModifStock.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -148,9 +151,6 @@
     <ClCompile Include="MyForm4.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="MyForm5.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="MyForm6.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -185,6 +185,18 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="MyForm13.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MyForm14.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MyForm15.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MappStat.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ServiceStats.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

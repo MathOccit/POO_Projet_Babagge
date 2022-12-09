@@ -19,7 +19,7 @@ namespace NS_Comp_Svc
 
         Data::DataSet^ SelectionnerTousLesClients(String^);
         void AjouterUnClient(String^, String^, String^, String^, String^, String^, String^, String^, String^);
-        void ModifierUnClient(String^, String^, String^, String^, String^, String^, String^, String^, String^);
+        void ModifierUnClient(String^, String^, String^, String^, String^, String^, String^, String^, String^, String^, String^, String^);
         void SupprimerUnClient(String^);
         Data::DataSet^ Rechercher(String^, String^, String^);
         Data::DataSet^ RechercherModif(String^, String^, String^);
