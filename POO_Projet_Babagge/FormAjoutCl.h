@@ -136,7 +136,7 @@ namespace POO_Projet_Babagge {
 			// button_ok
 			// 
 			this->button_ok->Anchor = System::Windows::Forms::AnchorStyles::Bottom;
-			this->button_ok->BackColor = System::Drawing::Color::Red;
+			this->button_ok->BackColor = System::Drawing::Color::DodgerBlue;
 			this->button_ok->ForeColor = System::Drawing::SystemColors::ButtonHighlight;
 			this->button_ok->Location = System::Drawing::Point(717, 429);
 			this->button_ok->Margin = System::Windows::Forms::Padding(2);
@@ -351,7 +351,7 @@ namespace POO_Projet_Babagge {
 			// 
 			// panel1
 			// 
-			this->panel1->BackColor = System::Drawing::Color::Salmon;
+			this->panel1->BackColor = System::Drawing::Color::DodgerBlue;
 			this->panel1->Controls->Add(this->label1);
 			this->panel1->Dock = System::Windows::Forms::DockStyle::Top;
 			this->panel1->Location = System::Drawing::Point(0, 0);
@@ -365,6 +365,7 @@ namespace POO_Projet_Babagge {
 			this->label1->AutoSize = true;
 			this->label1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 24, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
+			this->label1->ForeColor = System::Drawing::Color::White;
 			this->label1->Location = System::Drawing::Point(302, 17);
 			this->label1->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label1->Name = L"label1";
@@ -376,6 +377,7 @@ namespace POO_Projet_Babagge {
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
+			this->BackColor = System::Drawing::Color::White;
 			this->ClientSize = System::Drawing::Size(814, 471);
 			this->Controls->Add(this->panel1);
 			this->Controls->Add(this->text_naissance);

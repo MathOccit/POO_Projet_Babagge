@@ -126,12 +126,13 @@ namespace POO_Projet_Babagge {
 			// 
 			// panel1
 			// 
-			this->panel1->BackColor = System::Drawing::Color::YellowGreen;
+			this->panel1->BackColor = System::Drawing::Color::LightPink;
 			this->panel1->Controls->Add(this->label_titre);
 			this->panel1->Dock = System::Windows::Forms::DockStyle::Top;
 			this->panel1->Location = System::Drawing::Point(0, 0);
+			this->panel1->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->panel1->Name = L"panel1";
-			this->panel1->Size = System::Drawing::Size(1150, 100);
+			this->panel1->Size = System::Drawing::Size(862, 81);
 			this->panel1->TabIndex = 0;
 			// 
 			// label_titre
@@ -139,17 +140,19 @@ namespace POO_Projet_Babagge {
 			this->label_titre->AutoSize = true;
 			this->label_titre->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 24, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label_titre->Location = System::Drawing::Point(393, 28);
+			this->label_titre->Location = System::Drawing::Point(295, 23);
+			this->label_titre->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label_titre->Name = L"label_titre";
-			this->label_titre->Size = System::Drawing::Size(403, 46);
+			this->label_titre->Size = System::Drawing::Size(329, 37);
 			this->label_titre->TabIndex = 1;
 			this->label_titre->Text = L"Inserer un personnel";
 			// 
 			// text_nom
 			// 
-			this->text_nom->Location = System::Drawing::Point(167, 142);
+			this->text_nom->Location = System::Drawing::Point(125, 115);
+			this->text_nom->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->text_nom->Name = L"text_nom";
-			this->text_nom->Size = System::Drawing::Size(100, 22);
+			this->text_nom->Size = System::Drawing::Size(76, 20);
 			this->text_nom->TabIndex = 1;
 			// 
 			// label_nom
@@ -157,9 +160,10 @@ namespace POO_Projet_Babagge {
 			this->label_nom->AutoSize = true;
 			this->label_nom->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label_nom->Location = System::Drawing::Point(57, 142);
+			this->label_nom->Location = System::Drawing::Point(43, 115);
+			this->label_nom->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label_nom->Name = L"label_nom";
-			this->label_nom->Size = System::Drawing::Size(47, 22);
+			this->label_nom->Size = System::Drawing::Size(41, 18);
 			this->label_nom->TabIndex = 2;
 			this->label_nom->Text = L"Nom";
 			// 
@@ -168,35 +172,39 @@ namespace POO_Projet_Babagge {
 			this->label_prenom->AutoSize = true;
 			this->label_prenom->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label_prenom->Location = System::Drawing::Point(392, 144);
+			this->label_prenom->Location = System::Drawing::Point(294, 117);
+			this->label_prenom->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label_prenom->Name = L"label_prenom";
-			this->label_prenom->Size = System::Drawing::Size(72, 22);
+			this->label_prenom->Size = System::Drawing::Size(61, 18);
 			this->label_prenom->TabIndex = 4;
 			this->label_prenom->Text = L"Prenom";
 			// 
 			// text_prenom
 			// 
-			this->text_prenom->Location = System::Drawing::Point(502, 144);
+			this->text_prenom->Location = System::Drawing::Point(376, 117);
+			this->text_prenom->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->text_prenom->Name = L"text_prenom";
-			this->text_prenom->Size = System::Drawing::Size(100, 22);
+			this->text_prenom->Size = System::Drawing::Size(76, 20);
 			this->text_prenom->TabIndex = 3;
 			// 
 			// dateTimePicker_naissance
 			// 
 			this->dateTimePicker_naissance->CustomFormat = L"yyyy-MM-dd";
 			this->dateTimePicker_naissance->Format = System::Windows::Forms::DateTimePickerFormat::Custom;
-			this->dateTimePicker_naissance->Location = System::Drawing::Point(264, 209);
+			this->dateTimePicker_naissance->Location = System::Drawing::Point(198, 170);
+			this->dateTimePicker_naissance->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->dateTimePicker_naissance->Name = L"dateTimePicker_naissance";
-			this->dateTimePicker_naissance->Size = System::Drawing::Size(200, 22);
+			this->dateTimePicker_naissance->Size = System::Drawing::Size(151, 20);
 			this->dateTimePicker_naissance->TabIndex = 5;
 			// 
 			// dateTimePicker_embauche
 			// 
 			this->dateTimePicker_embauche->CustomFormat = L"yyyy-MM-dd";
 			this->dateTimePicker_embauche->Format = System::Windows::Forms::DateTimePickerFormat::Custom;
-			this->dateTimePicker_embauche->Location = System::Drawing::Point(758, 209);
+			this->dateTimePicker_embauche->Location = System::Drawing::Point(568, 170);
+			this->dateTimePicker_embauche->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->dateTimePicker_embauche->Name = L"dateTimePicker_embauche";
-			this->dateTimePicker_embauche->Size = System::Drawing::Size(200, 22);
+			this->dateTimePicker_embauche->Size = System::Drawing::Size(151, 20);
 			this->dateTimePicker_embauche->TabIndex = 6;
 			// 
 			// label_date_de_naissance
@@ -204,9 +212,10 @@ namespace POO_Projet_Babagge {
 			this->label_date_de_naissance->AutoSize = true;
 			this->label_date_de_naissance->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.8F, System::Drawing::FontStyle::Regular,
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->label_date_de_naissance->Location = System::Drawing::Point(53, 209);
+			this->label_date_de_naissance->Location = System::Drawing::Point(40, 170);
+			this->label_date_de_naissance->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label_date_de_naissance->Name = L"label_date_de_naissance";
-			this->label_date_de_naissance->Size = System::Drawing::Size(159, 22);
+			this->label_date_de_naissance->Size = System::Drawing::Size(130, 18);
 			this->label_date_de_naissance->TabIndex = 7;
 			this->label_date_de_naissance->Text = L"Date de naissance";
 			// 
@@ -215,9 +224,10 @@ namespace POO_Projet_Babagge {
 			this->label_date_embauche->AutoSize = true;
 			this->label_date_embauche->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.8F, System::Drawing::FontStyle::Regular,
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->label_date_embauche->Location = System::Drawing::Point(546, 209);
+			this->label_date_embauche->Location = System::Drawing::Point(410, 170);
+			this->label_date_embauche->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label_date_embauche->Name = L"label_date_embauche";
-			this->label_date_embauche->Size = System::Drawing::Size(150, 22);
+			this->label_date_embauche->Size = System::Drawing::Size(123, 18);
 			this->label_date_embauche->TabIndex = 8;
 			this->label_date_embauche->Text = L"Date d\'embauche";
 			// 
@@ -226,9 +236,10 @@ namespace POO_Projet_Babagge {
 			this->label_titulaire->AutoSize = true;
 			this->label_titulaire->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label_titulaire->Location = System::Drawing::Point(754, 144);
+			this->label_titulaire->Location = System::Drawing::Point(566, 117);
+			this->label_titulaire->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label_titulaire->Name = L"label_titulaire";
-			this->label_titulaire->Size = System::Drawing::Size(75, 22);
+			this->label_titulaire->Size = System::Drawing::Size(59, 18);
 			this->label_titulaire->TabIndex = 9;
 			this->label_titulaire->Text = L"Titulaire";
 			// 
@@ -239,9 +250,10 @@ namespace POO_Projet_Babagge {
 				L"Houle Remy       \t(Directeur)", L"Rodrigue Arthur \t(Responsable du stock et des commandes)",
 					L"Artois Pierrette   \t(Responsable administrative)", L"Mothé Germaine\t(Responsable des clients et du SAV)"
 			});
-			this->combo_titulaire->Location = System::Drawing::Point(888, 142);
+			this->combo_titulaire->Location = System::Drawing::Point(666, 115);
+			this->combo_titulaire->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->combo_titulaire->Name = L"combo_titulaire";
-			this->combo_titulaire->Size = System::Drawing::Size(239, 24);
+			this->combo_titulaire->Size = System::Drawing::Size(180, 21);
 			this->combo_titulaire->TabIndex = 10;
 			// 
 			// label_Mail
@@ -249,24 +261,27 @@ namespace POO_Projet_Babagge {
 			this->label_Mail->AutoSize = true;
 			this->label_Mail->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label_Mail->Location = System::Drawing::Point(54, 271);
+			this->label_Mail->Location = System::Drawing::Point(40, 220);
+			this->label_Mail->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label_Mail->Name = L"label_Mail";
-			this->label_Mail->Size = System::Drawing::Size(42, 22);
+			this->label_Mail->Size = System::Drawing::Size(35, 18);
 			this->label_Mail->TabIndex = 11;
 			this->label_Mail->Text = L"Mail";
 			// 
 			// text_mail
 			// 
-			this->text_mail->Location = System::Drawing::Point(178, 273);
+			this->text_mail->Location = System::Drawing::Point(134, 222);
+			this->text_mail->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->text_mail->Name = L"text_mail";
-			this->text_mail->Size = System::Drawing::Size(593, 22);
+			this->text_mail->Size = System::Drawing::Size(446, 20);
 			this->text_mail->TabIndex = 12;
 			// 
 			// text_telephone
 			// 
-			this->text_telephone->Location = System::Drawing::Point(178, 327);
+			this->text_telephone->Location = System::Drawing::Point(134, 266);
+			this->text_telephone->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->text_telephone->Name = L"text_telephone";
-			this->text_telephone->Size = System::Drawing::Size(283, 22);
+			this->text_telephone->Size = System::Drawing::Size(213, 20);
 			this->text_telephone->TabIndex = 13;
 			// 
 			// label_telephone
@@ -274,20 +289,22 @@ namespace POO_Projet_Babagge {
 			this->label_telephone->AutoSize = true;
 			this->label_telephone->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label_telephone->Location = System::Drawing::Point(54, 325);
+			this->label_telephone->Location = System::Drawing::Point(40, 264);
+			this->label_telephone->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label_telephone->Name = L"label_telephone";
-			this->label_telephone->Size = System::Drawing::Size(96, 22);
+			this->label_telephone->Size = System::Drawing::Size(77, 18);
 			this->label_telephone->TabIndex = 14;
 			this->label_telephone->Text = L"Telephone";
 			// 
 			// button_OK
 			// 
-			this->button_OK->BackColor = System::Drawing::Color::YellowGreen;
+			this->button_OK->BackColor = System::Drawing::Color::LightPink;
 			this->button_OK->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button_OK->Location = System::Drawing::Point(1037, 531);
+			this->button_OK->Location = System::Drawing::Point(778, 431);
+			this->button_OK->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->button_OK->Name = L"button_OK";
-			this->button_OK->Size = System::Drawing::Size(101, 29);
+			this->button_OK->Size = System::Drawing::Size(76, 24);
 			this->button_OK->TabIndex = 15;
 			this->button_OK->Text = L"OK";
 			this->button_OK->UseVisualStyleBackColor = false;
@@ -298,9 +315,10 @@ namespace POO_Projet_Babagge {
 			this->label1->AutoSize = true;
 			this->label1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.8F, System::Drawing::FontStyle::Underline, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label1->Location = System::Drawing::Point(57, 399);
+			this->label1->Location = System::Drawing::Point(43, 324);
+			this->label1->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(194, 22);
+			this->label1->Size = System::Drawing::Size(158, 18);
 			this->label1->TabIndex = 16;
 			this->label1->Text = L"Adresse de résidence :";
 			// 
@@ -309,9 +327,10 @@ namespace POO_Projet_Babagge {
 			this->label_nom_rue->AutoSize = true;
 			this->label_nom_rue->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label_nom_rue->Location = System::Drawing::Point(57, 464);
+			this->label_nom_rue->Location = System::Drawing::Point(43, 377);
+			this->label_nom_rue->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label_nom_rue->Name = L"label_nom_rue";
-			this->label_nom_rue->Size = System::Drawing::Size(122, 22);
+			this->label_nom_rue->Size = System::Drawing::Size(101, 18);
 			this->label_nom_rue->TabIndex = 17;
 			this->label_nom_rue->Text = L"Nom de la rue";
 			// 
@@ -320,9 +339,10 @@ namespace POO_Projet_Babagge {
 			this->label_ville->AutoSize = true;
 			this->label_ville->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label_ville->Location = System::Drawing::Point(57, 509);
+			this->label_ville->Location = System::Drawing::Point(43, 414);
+			this->label_ville->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label_ville->Name = L"label_ville";
-			this->label_ville->Size = System::Drawing::Size(44, 22);
+			this->label_ville->Size = System::Drawing::Size(34, 18);
 			this->label_ville->TabIndex = 18;
 			this->label_ville->Text = L"Ville";
 			// 
@@ -331,9 +351,10 @@ namespace POO_Projet_Babagge {
 			this->label_num_rue->AutoSize = true;
 			this->label_num_rue->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label_num_rue->Location = System::Drawing::Point(598, 464);
+			this->label_num_rue->Location = System::Drawing::Point(448, 377);
+			this->label_num_rue->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label_num_rue->Name = L"label_num_rue";
-			this->label_num_rue->Size = System::Drawing::Size(139, 22);
+			this->label_num_rue->Size = System::Drawing::Size(115, 18);
 			this->label_num_rue->TabIndex = 19;
 			this->label_num_rue->Text = L"Numéro de rue :";
 			// 
@@ -342,45 +363,51 @@ namespace POO_Projet_Babagge {
 			this->label_pays->AutoSize = true;
 			this->label_pays->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label_pays->Location = System::Drawing::Point(597, 507);
+			this->label_pays->Location = System::Drawing::Point(448, 412);
+			this->label_pays->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label_pays->Name = L"label_pays";
-			this->label_pays->Size = System::Drawing::Size(50, 22);
+			this->label_pays->Size = System::Drawing::Size(41, 18);
 			this->label_pays->TabIndex = 20;
 			this->label_pays->Text = L"Pays";
 			// 
 			// text_nom_rue
 			// 
-			this->text_nom_rue->Location = System::Drawing::Point(217, 463);
+			this->text_nom_rue->Location = System::Drawing::Point(163, 376);
+			this->text_nom_rue->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->text_nom_rue->Name = L"text_nom_rue";
-			this->text_nom_rue->Size = System::Drawing::Size(364, 22);
+			this->text_nom_rue->Size = System::Drawing::Size(274, 20);
 			this->text_nom_rue->TabIndex = 21;
 			// 
 			// text_ville
 			// 
-			this->text_ville->Location = System::Drawing::Point(217, 509);
+			this->text_ville->Location = System::Drawing::Point(163, 414);
+			this->text_ville->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->text_ville->Name = L"text_ville";
-			this->text_ville->Size = System::Drawing::Size(364, 22);
+			this->text_ville->Size = System::Drawing::Size(274, 20);
 			this->text_ville->TabIndex = 22;
 			// 
 			// text_pays
 			// 
-			this->text_pays->Location = System::Drawing::Point(747, 506);
+			this->text_pays->Location = System::Drawing::Point(560, 411);
+			this->text_pays->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->text_pays->Name = L"text_pays";
-			this->text_pays->Size = System::Drawing::Size(196, 22);
+			this->text_pays->Size = System::Drawing::Size(148, 20);
 			this->text_pays->TabIndex = 23;
 			// 
 			// text_num_rue
 			// 
-			this->text_num_rue->Location = System::Drawing::Point(747, 463);
+			this->text_num_rue->Location = System::Drawing::Point(560, 376);
+			this->text_num_rue->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->text_num_rue->Name = L"text_num_rue";
-			this->text_num_rue->Size = System::Drawing::Size(196, 22);
+			this->text_num_rue->Size = System::Drawing::Size(148, 20);
 			this->text_num_rue->TabIndex = 24;
 			// 
 			// Inserer_Personnel
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
+			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(1150, 572);
+			this->BackColor = System::Drawing::Color::Snow;
+			this->ClientSize = System::Drawing::Size(862, 465);
 			this->Controls->Add(this->text_num_rue);
 			this->Controls->Add(this->text_pays);
 			this->Controls->Add(this->text_ville);
@@ -406,6 +433,7 @@ namespace POO_Projet_Babagge {
 			this->Controls->Add(this->label_nom);
 			this->Controls->Add(this->text_nom);
 			this->Controls->Add(this->panel1);
+			this->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->Name = L"Inserer_Personnel";
 			this->Text = L"Inserer_Personnel";
 			this->Load += gcnew System::EventHandler(this, &Inserer_Personnel::Inserer_Personnel_Load);

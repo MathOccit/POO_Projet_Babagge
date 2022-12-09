@@ -140,11 +140,11 @@ namespace POO_Projet_Babagge {
 			// 
 			// label1
 			// 
-			this->label1->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)), static_cast<System::Int32>(static_cast<System::Byte>(131)),
-				static_cast<System::Int32>(static_cast<System::Byte>(85)));
+			this->label1->BackColor = System::Drawing::Color::CornflowerBlue;
 			this->label1->Dock = System::Windows::Forms::DockStyle::Top;
 			this->label1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 39.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
+			this->label1->ForeColor = System::Drawing::Color::FloralWhite;
 			this->label1->Location = System::Drawing::Point(0, 0);
 			this->label1->Name = L"label1";
 			this->label1->Size = System::Drawing::Size(1366, 150);
@@ -154,6 +154,7 @@ namespace POO_Projet_Babagge {
 			// 
 			// button3
 			// 
+			this->button3->BackColor = System::Drawing::Color::CornflowerBlue;
 			this->button3->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button3.Image")));
 			this->button3->Location = System::Drawing::Point(450, 271);
 			this->button3->Name = L"button3";
@@ -161,7 +162,7 @@ namespace POO_Projet_Babagge {
 			this->button3->TabIndex = 23;
 			this->button3->Text = L"Valider";
 			this->button3->TextImageRelation = System::Windows::Forms::TextImageRelation::ImageBeforeText;
-			this->button3->UseVisualStyleBackColor = true;
+			this->button3->UseVisualStyleBackColor = false;
 			this->button3->Click += gcnew System::EventHandler(this, &FormModifCl::button3_Click);
 			// 
 			// panel6

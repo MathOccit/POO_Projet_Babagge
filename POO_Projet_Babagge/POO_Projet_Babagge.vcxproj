@@ -176,6 +176,13 @@
     <ClInclude Include="FormStat.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="FormTestV.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="FormTestIV.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="TestUnit.h" />
     <ClInclude Include="ServiceStock.h" />
     <ClInclude Include="ServiceStats.h" />
     <ClInclude Include="ServicePersonnel.h" />
@@ -207,9 +214,11 @@
     <ClCompile Include="MyForm13.cpp" />
     <ClCompile Include="MyForm14.cpp" />
     <ClCompile Include="MyForm15.cpp" />
+    <ClCompile Include="MyForm16.cpp" />
     <ClCompile Include="MyForm2.cpp" />
     <ClCompile Include="MyForm3.cpp" />
     <ClCompile Include="MyForm4.cpp" />
+    <ClCompile Include="MyForm5.cpp" />
     <ClCompile Include="MyForm6.cpp" />
     <ClCompile Include="MyForm7.cpp" />
     <ClCompile Include="MyForm8.cpp" />
@@ -226,6 +235,7 @@
     <ClCompile Include="ServicePersonnel.cpp" />
     <ClCompile Include="ServiceStats.cpp" />
     <ClCompile Include="ServiceStock.cpp" />
+    <ClCompile Include="TestUnit.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="app.ico" />
@@ -238,6 +248,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="FormAjoutPrs.resx">
+      <DependentUpon>FormAjoutPrs.h</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormClient.resx">
       <DependentUpon>FormClient.h</DependentUpon>
     </EmbeddedResource>
@@ -279,6 +292,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormStat.resx">
       <DependentUpon>FormStat.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTestIV.resx">
+      <DependentUpon>FormTestIV.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTestV.resx">
+      <DependentUpon>FormTestV.h</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

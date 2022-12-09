@@ -4,6 +4,8 @@
 #include "FormStock.h"
 #include "FormPersonnel.h"
 #include "FormStat.h"
+#include "TestUnit.h"
+#include "FormTestV.h"
 
 namespace POO_Projet_Babagge {
 
@@ -52,7 +54,7 @@ namespace POO_Projet_Babagge {
 	private: Form^ activeForm;
 
 	private: System::Windows::Forms::Panel^ PanelChildForm;
-	private: System::Windows::Forms::Button^ button6;
+
 	private: System::Windows::Forms::PictureBox^ pictureBox1;
 	private:
 
@@ -87,22 +89,20 @@ namespace POO_Projet_Babagge {
 			this->button2 = (gcnew System::Windows::Forms::Button());
 			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->panel2 = (gcnew System::Windows::Forms::Panel());
+			this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
 			this->panel3 = (gcnew System::Windows::Forms::Panel());
 			this->LblTitre = (gcnew System::Windows::Forms::Label());
 			this->PanelChildForm = (gcnew System::Windows::Forms::Panel());
-			this->button6 = (gcnew System::Windows::Forms::Button());
-			this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
 			this->panel1->SuspendLayout();
 			this->panel2->SuspendLayout();
-			this->panel3->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
+			this->panel3->SuspendLayout();
 			this->SuspendLayout();
 			// 
 			// panel1
 			// 
-			this->panel1->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(119)), static_cast<System::Int32>(static_cast<System::Byte>(111)),
-				static_cast<System::Int32>(static_cast<System::Byte>(112)));
-			this->panel1->Controls->Add(this->button6);
+			this->panel1->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(94)), static_cast<System::Int32>(static_cast<System::Byte>(141)),
+				static_cast<System::Int32>(static_cast<System::Byte>(169)));
 			this->panel1->Controls->Add(this->button5);
 			this->panel1->Controls->Add(this->button4);
 			this->panel1->Controls->Add(this->button3);
@@ -235,16 +235,29 @@ namespace POO_Projet_Babagge {
 			this->panel2->BackColor = System::Drawing::Color::Silver;
 			this->panel2->Controls->Add(this->pictureBox1);
 			this->panel2->Dock = System::Windows::Forms::DockStyle::Top;
+			this->panel2->ForeColor = System::Drawing::Color::Coral;
 			this->panel2->Location = System::Drawing::Point(0, 0);
 			this->panel2->Name = L"panel2";
 			this->panel2->Size = System::Drawing::Size(220, 170);
 			this->panel2->TabIndex = 1;
 			// 
+			// pictureBox1
+			// 
+			this->pictureBox1->BackColor = System::Drawing::Color::Transparent;
+			this->pictureBox1->Dock = System::Windows::Forms::DockStyle::Fill;
+			this->pictureBox1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox1.Image")));
+			this->pictureBox1->Location = System::Drawing::Point(0, 0);
+			this->pictureBox1->Name = L"pictureBox1";
+			this->pictureBox1->Size = System::Drawing::Size(220, 170);
+			this->pictureBox1->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
+			this->pictureBox1->TabIndex = 0;
+			this->pictureBox1->TabStop = false;
+			// 
 			// panel3
 			// 
 			this->panel3->AutoScroll = true;
-			this->panel3->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(111)), static_cast<System::Int32>(static_cast<System::Byte>(119)),
-				static_cast<System::Int32>(static_cast<System::Byte>(112)));
+			this->panel3->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(14)), static_cast<System::Int32>(static_cast<System::Byte>(85)),
+				static_cast<System::Int32>(static_cast<System::Byte>(127)));
 			this->panel3->Controls->Add(this->LblTitre);
 			this->panel3->Dock = System::Windows::Forms::DockStyle::Top;
 			this->panel3->Location = System::Drawing::Point(220, 0);
@@ -275,38 +288,6 @@ namespace POO_Projet_Babagge {
 			this->PanelChildForm->Size = System::Drawing::Size(713, 428);
 			this->PanelChildForm->TabIndex = 2;
 			// 
-			// button6
-			// 
-			this->button6->BackgroundImageLayout = System::Windows::Forms::ImageLayout::None;
-			this->button6->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->button6->Dock = System::Windows::Forms::DockStyle::Top;
-			this->button6->FlatAppearance->BorderSize = 0;
-			this->button6->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->button6->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->button6->ForeColor = System::Drawing::Color::SeaShell;
-			this->button6->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button6.Image")));
-			this->button6->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
-			this->button6->Location = System::Drawing::Point(0, 470);
-			this->button6->Name = L"button6";
-			this->button6->Padding = System::Windows::Forms::Padding(12, 0, 0, 0);
-			this->button6->Size = System::Drawing::Size(220, 60);
-			this->button6->TabIndex = 7;
-			this->button6->Text = L"  Test";
-			this->button6->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
-			this->button6->TextImageRelation = System::Windows::Forms::TextImageRelation::ImageBeforeText;
-			this->button6->UseVisualStyleBackColor = true;
-			// 
-			// pictureBox1
-			// 
-			this->pictureBox1->BackColor = System::Drawing::Color::Transparent;
-			this->pictureBox1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox1.Image")));
-			this->pictureBox1->Location = System::Drawing::Point(-19, -22);
-			this->pictureBox1->Name = L"pictureBox1";
-			this->pictureBox1->Size = System::Drawing::Size(236, 201);
-			this->pictureBox1->TabIndex = 0;
-			this->pictureBox1->TabStop = false;
-			// 
 			// FormMenuBase
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
@@ -322,11 +303,12 @@ namespace POO_Projet_Babagge {
 			this->Name = L"FormMenuBase";
 			this->Text = L"Elec\'TRON Enterprise Edition";
 			this->WindowState = System::Windows::Forms::FormWindowState::Maximized;
+			this->Load += gcnew System::EventHandler(this, &FormMenuBase::FormMenuBase_Load);
 			this->panel1->ResumeLayout(false);
 			this->panel2->ResumeLayout(false);
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
 			this->panel3->ResumeLayout(false);
 			this->panel3->PerformLayout();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
 			this->ResumeLayout(false);
 
 		}
@@ -366,6 +348,20 @@ private: System::Void btnStock(System::Object^ sender, System::EventArgs^ e)
 private: System::Void btnStats(System::Object^ sender, System::EventArgs^ e) 
 {
 	OpenChildForm(gcnew interfacestat::FormStat, sender);
+}
+
+private: System::Void FormMenuBase_Load(System::Object^ sender, System::EventArgs^ e) 
+{
+	NS_Comp_Test::Test^ oTest = gcnew NS_Comp_Test::Test;
+	String^ oFinTest = oTest->AjouterUnPersonnel();
+	if (oFinTest == "Test valider")
+	{
+
+	}
+	if (oFinTest == "Test invalide")
+	{
+
+	}
 }
 
 };

@@ -283,7 +283,7 @@ namespace interfacestat {
 			   // 
 			   this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			   this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			   this->BackColor = System::Drawing::SystemColors::AppWorkspace;
+			   this->BackColor = System::Drawing::SystemColors::Control;
 			   this->ClientSize = System::Drawing::Size(716, 459);
 			   this->Controls->Add(this->button9);
 			   this->Controls->Add(this->textBox2);
@@ -300,7 +300,7 @@ namespace interfacestat {
 			   this->Margin = System::Windows::Forms::Padding(2);
 			   this->MinimumSize = System::Drawing::Size(731, 498);
 			   this->Name = L"FormStat";
-			   this->Text = L"Statistique";
+			   this->Text = L"Stat";
 			   this->Load += gcnew System::EventHandler(this, &FormStat::FormStat_Load);
 			   (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->EndInit();
 			   this->ResumeLayout(false);

@@ -107,6 +107,15 @@
     <ClInclude Include="FormModifStock.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="TestUnit.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FormTestV.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FormTestIV.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CppCLR_WinFormsProject.cpp">
@@ -197,6 +206,15 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="ServiceStats.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TestUnit.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MyForm5.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MyForm16.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
